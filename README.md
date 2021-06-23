@@ -24,6 +24,6 @@
 - Le site devra s'adapter sur tablette et desktop, les choix de mise en forme étant libres ;
 - Le code HTML devra utiliser les **balises sémantiques** ;
 - L'ensemble du code HTML et CSS devra passer le test du **validateur W3C** sans alertes, ni erreurs ;
-- Le site devra être **compatible** au minimum avec les dernières versions de Chrome et Firefox (à date d'écriture du document)
+- Le site devra être **compatible** au minimum avec les dernières versions de Chrome et Firefox (à date d'écriture du document) ;
 - Le code CSS devra être **séparé** du code HTML, et l'ensemble des fichiers nécessaires au site rangé dans un dossier organisé ;
 - Le tout versionné à l'aide de **git** (ou autre outil de *versioning* équivalent) et stocké sur un *repository* distant (dans le cas présent, **GitHub**).
