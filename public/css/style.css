@@ -9,7 +9,7 @@
   justify-content: center;
 }
 .logo img {
-  width: 50%;
+  width: 40%;
   margin: 20px auto 12px;
 }
 
@@ -118,7 +118,7 @@
   padding-bottom: 0.5rem;
 }
 .footer__links li:first-of-type img {
-  width: 50%;
+  width: 40%;
 }
 .footer__links li {
   list-style: none;
