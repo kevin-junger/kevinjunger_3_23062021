@@ -13,7 +13,8 @@ $shadow: gainsboro;
     display: flex;
     align-items: center;
     justify-content: center;
-    svg{
+    img{
+        width: 50%;
         margin: 20px auto 12px;
     }
 }
@@ -111,6 +112,9 @@ $shadow: gainsboro;
         justify-content: space-between;
         li:first-of-type{
             padding-bottom: 0.5rem;
+            img{
+                width: 50%;
+            }
         }
         li{
             list-style: none;
