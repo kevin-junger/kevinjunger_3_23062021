@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo svg {
+  margin: 20px auto 12px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+}
+.location span {
+  margin: 1rem auto 1rem;
+}
+.location span i {
+  margin-right: 1rem;
+}
+
+.about {
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f6f6f6;
+  padding: 2rem;
+}
+
+.user-guide {
+  height: 440px;
+  padding: 3rem 2rem;
+}
+.user-guide ul {
+  height: 86%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 2rem 0 3rem;
+}
+.user-guide ul li {
+  list-style: none;
+  background-color: #f6f6f6;
+  margin-left: 0.5rem;
+  padding: 2rem;
+  border-radius: 30px;
+}
+.user-guide ul li span {
+  display: inline-block;
+  color: white;
+  background-color: #9356dc;
+  height: 21px;
+  width: 25px;
+  border-radius: 12.5px;
+  text-align: center;
+  margin-left: -2.5rem;
+  margin-right: 1rem;
+  padding-top: 0.3rem;
+}
+.user-guide ul li i {
+  margin-right: 1rem;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 3rem 2rem;
+}
+
+.cards {
+  width: 100%;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  margin: 1rem 0;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px gainsboro;
+  overflow: hidden;
+}
+
+.restaurant {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+.restaurant img {
+  height: 180px;
+}
+.restaurant figcaption {
+  margin: 1rem;
+}
+
+.footer {
+  height: 150px;
+  background-color: #353535;
+  padding: 2rem;
+}
+.footer__links {
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__links li:first-of-type {
+  padding-bottom: 0.5rem;
+}
+.footer__links li {
+  list-style: none;
+}
+.footer__links li i {
+  padding-right: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
