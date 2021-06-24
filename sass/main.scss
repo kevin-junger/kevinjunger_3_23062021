@@ -1,16 +1,100 @@
+/*Instructions globales*/
 *{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
-$color_1: #9356dc;
-$color_2: #ff79da;
-$color_2: #99e2d0;
-$bg_light_grey: #f6f6f6;
-$bg_light_brown: #eaeaea;
-$bg_dark_grey: #353535;
-$shadow: gainsboro;
+/*Classes couleurs*/
+$colours:(
+    light-grey: #f6f6f6,
+    grey: #dcdcdc,
+    dark-grey: #7e7e7e,
+    light-brown: #eaeaea,
+    coal: #353535,
+    purple: #9356dc,
+    pink: #ff79da,
+    green: #99e2d0
+);
+@each $colour, $hex in $colours{
+    .#{$colour}{
+        color: $hex;
+    }
+    .bg-#{$colour}{
+        background-color: $hex;
+    }
+    .sh-#{$colour}{
+        box-shadow: 0px 5px 10px $hex;
+    }
+}
+/*Classes fontes*/
+.fancy-heading{
+    font-family: 'Shrikland', cursive;
+}
+.bold{
+    font-weight: 700;
+}
+.light{
+    font-weight: 300;
+}
+/*Classes cards*/
+.cards{
+    width: 100%;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.card{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    img{
+        height: 180px;
+        object-fit: cover;
+    }
+    figcaption{
+        margin: 1rem;
+    }
+}
+/*Classes listes*/
+.list{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 3rem;
+}
+.list-item{
+    list-style: none;
+    padding: 2rem;
+    border-radius: 30px;
+}
+.ordered{
+    margin-left: 0.5rem;
+}
+.bullet{
+    display: inline-block;
+    color: white;
+    height: 21px;
+    width: 25px;
+    margin-left: -2.5rem;
+    margin-right: 1rem;
+    padding-top: 0.3rem;
+    border-radius: 12.5px;
+    text-align: center;
+    font-size: small;
+}
+/*Classe bouton*/
+.button{
+    padding: 1.8rem;
+    font-size: 1rem;
+    color: white;
+    border: hidden;
+    border-radius: 60px;
+    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+}
 .logo{
     display: flex;
     align-items: center;
@@ -24,7 +108,6 @@ $shadow: gainsboro;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $bg_light_brown;
     span{
         margin: 1rem auto 1rem;
         i{
@@ -38,7 +121,7 @@ $shadow: gainsboro;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: $bg_light_grey;
+    text-align: center;
     padding: 2rem;
 }
 .user-guide{
@@ -46,65 +129,17 @@ $shadow: gainsboro;
     padding: 3rem 2rem;
     ul{
         height: 86%;
-        display: flex;
-        flex-direction: column;
         justify-content: space-around;
-        margin: 2rem 0 3rem;
-        li{
-            list-style: none;
-            background-color: $bg_light_grey;
-            margin-left: 0.5rem;
-            padding: 2rem;
-            border-radius: 30px;
-            span{
-                display: inline-block;
-                color: white;
-                background-color: $color_1;
-                height: 21px;
-                width: 25px;
-                border-radius: 12.5px;
-                text-align: center;
-                margin-left: -2.5rem;
-                margin-right: 1rem;
-                padding-top: 0.3rem;
-            }
-            i{
-                margin-right: 1rem;
-            }
+        i{
+            margin-right: 1rem;
         }
     }
 }
 .restaurants{
-    background-color: $bg_light_grey;
     padding: 3rem 2rem;
-}
-.cards{
-    width: 100%;
-    margin-top: 0.5rem;
-    display: flex;
-    flex-direction: column;
-}
-.card{
-    margin: 1rem 0;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0px 5px 10px $shadow;
-    overflow: hidden;
-}
-.restaurant{
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    img{
-        height: 180px;
-    }
-    figcaption{
-        margin: 1rem;
-    }
 }
 .footer{
     height: 150px;
-    background-color: $bg_dark_grey;
     padding: 2rem;
     &__links{
         height: 100%;
