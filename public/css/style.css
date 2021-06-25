@@ -1,8 +1,8 @@
+@charset "UTF-8";
 /*Instructions globales*/
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -11,8 +11,8 @@ a {
   text-decoration: none;
 }
 
-/*Classes couleurs*/
-.light-grey {
+/*Couleurs - inclut fonds et ombres*/
+.c-light-grey {
   color: #f6f6f6;
 }
 
@@ -24,7 +24,7 @@ a {
   box-shadow: 0px 5px 10px #f6f6f6;
 }
 
-.grey {
+.c-grey {
   color: #dcdcdc;
 }
 
@@ -36,7 +36,7 @@ a {
   box-shadow: 0px 5px 10px #dcdcdc;
 }
 
-.dark-grey {
+.c-dark-grey {
   color: #7e7e7e;
 }
 
@@ -48,7 +48,7 @@ a {
   box-shadow: 0px 5px 10px #7e7e7e;
 }
 
-.light-brown {
+.c-light-brown {
   color: #eaeaea;
 }
 
@@ -60,7 +60,7 @@ a {
   box-shadow: 0px 5px 10px #eaeaea;
 }
 
-.coal {
+.c-coal {
   color: #353535;
 }
 
@@ -72,7 +72,7 @@ a {
   box-shadow: 0px 5px 10px #353535;
 }
 
-.purple {
+.c-purple {
   color: #9356dc;
 }
 
@@ -84,7 +84,7 @@ a {
   box-shadow: 0px 5px 10px #9356dc;
 }
 
-.pink {
+.c-pink {
   color: #ff79da;
 }
 
@@ -96,7 +96,7 @@ a {
   box-shadow: 0px 5px 10px #ff79da;
 }
 
-.green {
+.c-green {
   color: #99e2d0;
 }
 
@@ -108,7 +108,7 @@ a {
   box-shadow: 0px 5px 10px #99e2d0;
 }
 
-.dark-green {
+.c-dark-green {
   color: #008766;
 }
 
@@ -120,24 +120,41 @@ a {
   box-shadow: 0px 5px 10px #008766;
 }
 
-/*Classes fontes*/
-.fancy-heading {
-  font-family: "Shrikland", cursive;
+/*Fontes*/
+.f-regular {
+  font-family: "Roboto";
 }
 
-.bold {
-  font-weight: 700;
+.f-fancy {
+  font-family: "Shrikland";
 }
 
-.light {
+.fw-light {
   font-weight: 300;
 }
 
-/*Classes cards*/
+.fw-bold {
+  font-weight: 700;
+}
+
+/*Icônes*/
+.i-inline {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+/*Logo*/
+.logo {
+  width: 40%;
+}
+
+/*Cards*/
 .card {
   position: relative;
   height: 250px;
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
@@ -151,7 +168,7 @@ a {
   margin: 1rem;
 }
 
-.sticker {
+.card-sticker {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -162,24 +179,24 @@ a {
   font-size: 0.7rem;
 }
 
-/*Classes listes*/
+/*Listes*/
 .list {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem 0 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: -1.5rem;
 }
 
 .list-item {
-  list-style: none;
+  display: block;
+  margin-bottom: 1.5rem;
   padding: 1.8rem 2rem;
   border-radius: 30px;
 }
 
-.ordered {
+.list-ordered {
   margin-left: 0.5rem;
 }
 
-.bullet {
+.list-bullet {
   display: inline-block;
   color: white;
   height: 21px;
@@ -192,7 +209,7 @@ a {
   font-size: small;
 }
 
-/*Classe bouton*/
+/*Bouton*/
 .button {
   padding: 1.8rem;
   font-size: 1rem;
@@ -202,76 +219,36 @@ a {
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.logo img {
-  width: 40%;
-  margin: 20px auto 12px;
+/*Blocs*/
+.b-padding {
+  padding: 2rem 1.5rem;
 }
 
-.location {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.location span {
-  margin: 1rem auto 1rem;
-}
-.location span i {
-  margin-right: 1rem;
+.nav__bar {
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
 }
 
-.about {
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+.nav__location {
+  text-align: center;
+  padding: 1rem;
+}
+
+.header__hero {
   text-align: center;
   padding: 2rem;
 }
-
-.user-guide {
-  height: 400px;
-  padding: 3rem 2rem;
-}
-.user-guide ul {
-  height: 86%;
-  justify-content: space-around;
-}
-.user-guide ul i {
-  margin-right: 1rem;
-}
-
-.restaurants {
-  padding: 3rem 1.5rem;
+.header__hero p {
+  margin: 2rem 0;
 }
 
 .footer {
-  height: 150px;
   padding: 2rem;
   color: white;
 }
-.footer__links {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.footer__links li:first-of-type {
-  padding-bottom: 0.5rem;
-}
-.footer__links li:first-of-type img {
-  width: 40%;
-}
-.footer__links li {
+.footer li {
   list-style: none;
-}
-.footer__links li i {
-  padding-right: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 /*# sourceMappingURL=style.css.map */

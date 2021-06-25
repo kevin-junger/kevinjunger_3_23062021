@@ -2,14 +2,13 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
 a{
     color: black;
     text-decoration: none;
 }
-/*Classes couleurs*/
+/*Couleurs - inclut fonds et ombres*/
 $colours:(
     light-grey: #f6f6f6,
     grey: #dcdcdc,
@@ -22,7 +21,7 @@ $colours:(
     dark-green: #008766
 );
 @each $colour, $hex in $colours{
-    .#{$colour}{
+    .c-#{$colour}{
         color: $hex;
     }
     .bg-#{$colour}{
@@ -32,21 +31,41 @@ $colours:(
         box-shadow: 0px 5px 10px $hex;
     }
 }
-/*Classes fontes*/
-.fancy-heading{
-    font-family: 'Shrikland', cursive;
+/*Fontes*/
+$fonts:(
+    regular: 'Roboto',
+    fancy: 'Shrikland'
+);
+$weights:(
+    light: 300,
+    bold: 700
+);
+@each $font, $name in $fonts{
+    .f-#{$font}{
+        font-family: '#{$name}';
+    }
 }
-.bold{
-    font-weight: 700;
+@each $weight, $value in $weights{
+    .fw-#{$weight}{
+        font-weight: #{$value};
+    }
 }
-.light{
-    font-weight: 300;
+/*Icônes*/
+.i-inline{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+    text-align: center;
 }
-/*Classes cards*/
+/*Logo*/
+.logo{
+    width: 40%;
+}
+/*Cards*/
 .card{
     position: relative;
     height: 250px;
-    margin: 1.5rem 0;
+    margin-top: 1.5rem;
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
@@ -59,7 +78,7 @@ $colours:(
         margin: 1rem;
     }
 }
-.sticker{
+.card-sticker{
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -69,21 +88,21 @@ $colours:(
     text-align: center;
     font-size: 0.7rem;
 }
-/*Classes listes*/
+/*Listes*/
 .list{
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 0 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: -1.5rem;
 }
 .list-item{
-    list-style: none;
+    display: block;
+    margin-bottom: 1.5rem;
     padding: 1.8rem 2rem;
     border-radius: 30px;
 }
-.ordered{
+.list-ordered{
     margin-left: 0.5rem;
 }
-.bullet{
+.list-bullet{
     display: inline-block;
     color: white;
     height: 21px;
@@ -95,7 +114,7 @@ $colours:(
     text-align: center;
     font-size: small;
 }
-/*Classe bouton*/
+/*Bouton*/
 .button{
     padding: 1.8rem;
     font-size: 1rem;
@@ -104,69 +123,30 @@ $colours:(
     border-radius: 60px;
     background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
 }
-.logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img{
-        width: 40%;
-        margin: 20px auto 12px;
-    }
+/*Blocs*/
+.b-padding{
+    padding: 2rem 1.5rem;
 }
-.location{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    span{
-        margin: 1rem auto 1rem;
-        i{
-            margin-right: 1rem;
-        }
-    }
+.nav__bar{
+    text-align: center;
+    padding: 1rem 0 0.5rem 0;
 }
-.about{
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+.nav__location{
+    text-align: center;
+    padding: 1rem;
+}
+.header__hero{
     text-align: center;
     padding: 2rem;
-}
-.user-guide{
-    height: 400px;
-    padding: 3rem 2rem;
-    ul{
-        height: 86%;
-        justify-content: space-around;
-        i{
-            margin-right: 1rem;
-        }
+    p{
+        margin: 2rem 0;
     }
 }
-.restaurants{
-    padding: 3rem 1.5rem;
-}
 .footer{
-    height: 150px;
     padding: 2rem;
     color: white;
-    &__links{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        li:first-of-type{
-            padding-bottom: 0.5rem;
-            img{
-                width: 40%;
-            }
-        }
-        li{
-            list-style: none;
-            i{
-                padding-right: 0.5rem;
-            }
-        }
+    li{
+        list-style: none;
+        margin-bottom: 0.75rem;
     }
 }
