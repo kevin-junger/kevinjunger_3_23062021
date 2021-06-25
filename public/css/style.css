@@ -6,6 +6,11 @@
   font-weight: 400;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 /*Classes couleurs*/
 .light-grey {
   color: #f6f6f6;
@@ -103,6 +108,18 @@
   box-shadow: 0px 5px 10px #99e2d0;
 }
 
+.dark-green {
+  color: #008766;
+}
+
+.bg-dark-green {
+  background-color: #008766;
+}
+
+.sh-dark-green {
+  box-shadow: 0px 5px 10px #008766;
+}
+
 /*Classes fontes*/
 .fancy-heading {
   font-family: "Shrikland", cursive;
@@ -117,28 +134,32 @@
 }
 
 /*Classes cards*/
-.cards {
-  width: 100%;
-  margin-top: 0.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
 .card {
+  position: relative;
   height: 250px;
-  display: flex;
-  flex-direction: column;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
 }
 .card img {
-  height: 180px;
+  height: 170px;
+  width: 100%;
   object-fit: cover;
 }
 .card figcaption {
   margin: 1rem;
+}
+
+.sticker {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.7rem;
 }
 
 /*Classes listes*/
@@ -150,7 +171,7 @@
 
 .list-item {
   list-style: none;
-  padding: 2rem;
+  padding: 1.8rem 2rem;
   border-radius: 30px;
 }
 
@@ -204,7 +225,7 @@
 }
 
 .about {
-  height: 290px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -214,7 +235,7 @@
 }
 
 .user-guide {
-  height: 440px;
+  height: 400px;
   padding: 3rem 2rem;
 }
 .user-guide ul {
@@ -226,16 +247,16 @@
 }
 
 .restaurants {
-  padding: 3rem 2rem;
+  padding: 3rem 1.5rem;
 }
 
 .footer {
   height: 150px;
   padding: 2rem;
+  color: white;
 }
 .footer__links {
   height: 100%;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
