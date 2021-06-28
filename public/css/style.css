@@ -1,0 +1,298 @@
+@charset "UTF-8";
+/*Instructions globales*/
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/*Couleurs - inclut fonds et ombres*/
+.c-light-grey {
+  color: #f6f6f6;
+}
+
+.bg-light-grey {
+  background-color: #f6f6f6;
+}
+
+.sh-light-grey {
+  box-shadow: 0px 5px 10px #f6f6f6;
+}
+
+.c-grey {
+  color: #dadada;
+}
+
+.bg-grey {
+  background-color: #dadada;
+}
+
+.sh-grey {
+  box-shadow: 0px 5px 10px #dadada;
+}
+
+.c-dark-grey {
+  color: #7e7e7e;
+}
+
+.bg-dark-grey {
+  background-color: #7e7e7e;
+}
+
+.sh-dark-grey {
+  box-shadow: 0px 5px 10px #7e7e7e;
+}
+
+.c-light-brown {
+  color: #eaeaea;
+}
+
+.bg-light-brown {
+  background-color: #eaeaea;
+}
+
+.sh-light-brown {
+  box-shadow: 0px 5px 10px #eaeaea;
+}
+
+.c-coal {
+  color: #353535;
+}
+
+.bg-coal {
+  background-color: #353535;
+}
+
+.sh-coal {
+  box-shadow: 0px 5px 10px #353535;
+}
+
+.c-purple {
+  color: #9356dc;
+}
+
+.bg-purple {
+  background-color: #9356dc;
+}
+
+.sh-purple {
+  box-shadow: 0px 5px 10px #9356dc;
+}
+
+.c-pink {
+  color: #ff79da;
+}
+
+.bg-pink {
+  background-color: #ff79da;
+}
+
+.sh-pink {
+  box-shadow: 0px 5px 10px #ff79da;
+}
+
+.c-green {
+  color: #99e2d0;
+}
+
+.bg-green {
+  background-color: #99e2d0;
+}
+
+.sh-green {
+  box-shadow: 0px 5px 10px #99e2d0;
+}
+
+.c-dark-green {
+  color: #008766;
+}
+
+.bg-dark-green {
+  background-color: #008766;
+}
+
+.sh-dark-green {
+  box-shadow: 0px 5px 10px #008766;
+}
+
+/*Fontes*/
+.f-regular {
+  font-family: "Roboto";
+}
+
+.f-fancy {
+  font-family: "Shrikhand";
+}
+
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+/*Icônes*/
+.i-inline {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+/*Logo*/
+.logo {
+  width: 40%;
+}
+
+/*Cards*/
+.card {
+  position: relative;
+  height: 250px;
+  margin-top: 1.5rem;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.card__sticker {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.7rem;
+}
+.card__illustration {
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
+}
+.card__caption {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__like {
+  font-size: 2rem;
+}
+
+/*Listes*/
+.list {
+  margin-top: 1.5rem;
+}
+.list__item {
+  display: block;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 25px;
+}
+.list__ordered {
+  margin-left: 0.5rem;
+}
+.list__bullet {
+  display: inline-block;
+  color: white;
+  height: 21px;
+  width: 25px;
+  margin-left: -2.5rem;
+  margin-right: 1rem;
+  padding-top: 0.3rem;
+  border-radius: 12.5px;
+  text-align: center;
+  font-size: small;
+}
+
+/*Bouton*/
+.button {
+  display: block;
+  margin: 0 auto;
+  padding: 1.4rem 1.8rem;
+  font-size: 1rem;
+  color: white;
+  border: hidden;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+}
+
+/*Blocs*/
+.b-padding {
+  padding: 2rem 1.5rem;
+}
+
+.navbar {
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.location {
+  text-align: center;
+  padding: 1rem;
+  box-shadow: inset 0px 5px 5px #dadada;
+}
+
+.about {
+  text-align: center;
+  padding: 2rem;
+}
+.about p {
+  margin: 2rem 0;
+}
+
+.hero {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+
+.user-guide {
+  padding: 3rem 2rem 2rem;
+}
+
+.menu {
+  position: relative;
+  margin-top: -2rem;
+  border-radius: 30px 30px 0 0;
+}
+.menu h1 {
+  margin-bottom: 1rem;
+}
+
+.course__name {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.course__choice {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.course__choice h3 {
+  flex-basis: 100%;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.course__choice :not(h3) {
+  font-size: 0.75rem;
+}
+
+.footer {
+  color: white;
+}
+.footer__links {
+  padding: 1.5rem 1.5rem 0.75rem;
+}
+.footer__link {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/*# sourceMappingURL=style.css.map */

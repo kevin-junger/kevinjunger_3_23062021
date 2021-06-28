@@ -1,0 +1,198 @@
+/*Instructions globales*/
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/*Couleurs - inclut fonds et ombres*/
+$colours:(
+    light-grey: #f6f6f6,
+    grey: #dadada,
+    dark-grey: #7e7e7e,
+    light-brown: #eaeaea,
+    coal: #353535,
+    purple: #9356dc,
+    pink: #ff79da,
+    green: #99e2d0,
+    dark-green: #008766
+);
+@each $colour, $hex in $colours{
+    .c-#{$colour}{
+        color: $hex;
+    }
+    .bg-#{$colour}{
+        background-color: $hex;
+    }
+    .sh-#{$colour}{
+        box-shadow: 0px 5px 10px $hex;
+    }
+}
+/*Fontes*/
+$fonts:(
+    regular: 'Roboto',
+    fancy: 'Shrikhand'
+);
+$weights:(
+    light: 300,
+    bold: 700
+);
+@each $font, $name in $fonts{
+    .f-#{$font}{
+        font-family: '#{$name}';
+    }
+}
+@each $weight, $value in $weights{
+    .fw-#{$weight}{
+        font-weight: #{$value};
+    }
+}
+/*Icônes*/
+.i-inline{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+}
+/*Logo*/
+.logo{
+    width: 40%;
+}
+/*Cards*/
+.card{
+    position: relative;
+    height: 250px;
+    margin-top: 1.5rem;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    &__sticker{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 50px;
+        padding: .5rem;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    &__illustration{
+        height: 170px;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__caption{
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__like{
+        font-size: 2rem;
+    }
+}
+/*Listes*/
+.list{
+    margin-top: 1.5rem;
+    &__item{
+        display: block;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 25px;
+    }
+    &__ordered{
+        margin-left: .5rem;
+    }
+    &__bullet{
+        display: inline-block;
+        color: white;
+        height: 21px;
+        width: 25px;
+        margin-left: -2.5rem;
+        margin-right: 1rem;
+        padding-top: .3rem;
+        border-radius: 12.5px;
+        text-align: center;
+        font-size: small;
+    }
+}
+/*Bouton*/
+.button{
+    display: block;
+    margin: 0 auto;
+    padding: 1.4rem 1.8rem;
+    font-size: 1rem;
+    color: white;
+    border: hidden;
+    border-radius: 50px;
+    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+}
+/*Blocs*/
+.b-padding{
+    padding: 2rem 1.5rem;
+}
+.navbar{
+    text-align: center;
+    padding: 1rem 0 .5rem 0;
+}
+.location{
+    text-align: center;
+    padding: 1rem;
+    box-shadow: inset 0px 5px 5px #dadada;
+}
+.about{
+    text-align: center;
+    padding: 2rem;
+    p{
+        margin: 2rem 0;
+    }
+}
+.hero{
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+}
+.user-guide{
+    padding: 3rem 2rem 2rem;
+}
+.menu{
+    position: relative;
+    margin-top: -2rem;
+    border-radius: 30px 30px 0 0;
+    h1{
+        margin-bottom: 1rem;
+    }
+}
+.course{
+    &__name{
+        font-size: .9rem;
+        text-transform: uppercase;
+    }
+    &__choice{
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        h3{
+            flex-basis: 100%;
+            font-size: 1rem;
+            margin-bottom: .25rem;
+        }
+        :not(h3){
+            font-size: .75rem;
+        }
+    }
+}
+.footer{
+    color: white;
+    &__links{
+        padding: 1.5rem 1.5rem .75rem;
+    }
+    &__link{
+        display: block;
+        margin-bottom: .75rem;
+    }
+}
