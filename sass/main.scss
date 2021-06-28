@@ -74,7 +74,7 @@ $weights:(
         top: 1rem;
         right: 1rem;
         width: 50px;
-        padding: 0.5rem;
+        padding: .5rem;
         border-radius: 5px;
         text-align: center;
         font-size: 0.7rem;
@@ -97,7 +97,6 @@ $weights:(
 /*Listes*/
 .list{
     margin-top: 1.5rem;
-    margin-bottom: -1.5rem;
     &__item{
         display: block;
         margin-bottom: 1.5rem;
@@ -105,7 +104,7 @@ $weights:(
         border-radius: 25px;
     }
     &__ordered{
-        margin-left: 0.5rem;
+        margin-left: .5rem;
     }
     &__bullet{
         display: inline-block;
@@ -114,7 +113,7 @@ $weights:(
         width: 25px;
         margin-left: -2.5rem;
         margin-right: 1rem;
-        padding-top: 0.3rem;
+        padding-top: .3rem;
         border-radius: 12.5px;
         text-align: center;
         font-size: small;
@@ -122,6 +121,8 @@ $weights:(
 }
 /*Bouton*/
 .button{
+    display: block;
+    margin: 0 auto;
     padding: 1.4rem 1.8rem;
     font-size: 1rem;
     color: white;
@@ -135,7 +136,7 @@ $weights:(
 }
 .navbar{
     text-align: center;
-    padding: 1rem 0 0.5rem 0;
+    padding: 1rem 0 .5rem 0;
 }
 .location{
     text-align: center;
@@ -151,24 +152,47 @@ $weights:(
 }
 .hero{
     width: 100%;
+    height: 25vh;
+    object-fit: cover;
+}
+.user-guide{
+    padding: 3rem 2rem 2rem;
 }
 .menu{
+    position: relative;
     margin-top: -2rem;
     border-radius: 30px 30px 0 0;
+    h1{
+        margin-bottom: 1rem;
+    }
 }
 .course{
-    &__choice p{
-        margin-top: 0.25rem;
-        font-size: 0.8rem;
+    &__name{
+        font-size: .9rem;
+        text-transform: uppercase;
+    }
+    &__choice{
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        h3{
+            flex-basis: 100%;
+            font-size: 1rem;
+            margin-bottom: .25rem;
+        }
+        :not(h3){
+            font-size: .75rem;
+        }
     }
 }
 .footer{
     color: white;
     &__links{
-        padding: 1.5rem 1.5rem 0.75rem;
+        padding: 1.5rem 1.5rem .75rem;
     }
     &__link{
         display: block;
-        margin-bottom: 0.75rem;
+        margin-bottom: .75rem;
     }
 }
