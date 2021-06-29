@@ -12,6 +12,18 @@ a {
 }
 
 /*Couleurs - inclut fonds et ombres*/
+.c-white {
+  color: #fff;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.sh-white {
+  box-shadow: 0px 5px 10px #fff;
+}
+
 .c-light-grey {
   color: #f6f6f6;
 }
@@ -193,6 +205,7 @@ a {
   margin-bottom: 1.5rem;
   padding: 1.5rem 2rem;
   border-radius: 25px;
+  overflow: hidden;
 }
 .list__ordered {
   margin-left: 0.5rem;
@@ -272,16 +285,27 @@ a {
 .course__choice {
   background-color: white;
   display: flex;
+}
+.course__desc {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.course__choice h3 {
+.course__desc h3 {
   flex-basis: 100%;
   font-size: 1rem;
   margin-bottom: 0.25rem;
 }
-.course__choice :not(h3) {
+.course__desc :not(h3) {
   font-size: 0.75rem;
+}
+.course__sel {
+  margin: -1.5rem -2rem -1.5rem 2rem;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
 }
 
 .footer {

@@ -10,6 +10,7 @@ a{
 }
 /*Couleurs - inclut fonds et ombres*/
 $colours:(
+    white: #fff,
     light-grey: #f6f6f6,
     grey: #dadada,
     dark-grey: #7e7e7e,
@@ -102,6 +103,7 @@ $weights:(
         margin-bottom: 1.5rem;
         padding: 1.5rem 2rem;
         border-radius: 25px;
+        overflow: hidden;
     }
     &__ordered{
         margin-left: .5rem;
@@ -174,6 +176,9 @@ $weights:(
     &__choice{
         background-color: white;
         display: flex;
+    }
+    &__desc{
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         h3{
@@ -184,6 +189,14 @@ $weights:(
         :not(h3){
             font-size: .75rem;
         }
+    }
+    &__sel{
+        margin: -1.5rem -2rem -1.5rem 2rem;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
     }
 }
 .footer{
