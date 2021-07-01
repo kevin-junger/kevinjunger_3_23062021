@@ -1,18 +1,4 @@
-@charset "UTF-8";
-/*Instructions globales*/
-* {
-  margin: 0;
-  padding: 0;
-  font-weight: 400;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-/*Couleurs - inclut fonds et ombres*/
-.c-white {
+.c-white, .restaurant, .user-guide__step, .button {
   color: #fff;
 }
 
@@ -28,7 +14,7 @@ a {
   color: #f6f6f6;
 }
 
-.bg-light-grey {
+.bg-light-grey, .user-guide__desc {
   background-color: #f6f6f6;
 }
 
@@ -44,7 +30,7 @@ a {
   background-color: #dadada;
 }
 
-.sh-grey {
+.sh-grey, .course__choice, .restaurant, .user-guide__desc, .button {
   box-shadow: 0px 5px 10px #dadada;
 }
 
@@ -88,7 +74,7 @@ a {
   color: #9356dc;
 }
 
-.bg-purple {
+.bg-purple, .user-guide__step {
   background-color: #9356dc;
 }
 
@@ -112,7 +98,7 @@ a {
   color: #99e2d0;
 }
 
-.bg-green {
+.bg-green, .restaurant__sticker {
   background-color: #99e2d0;
 }
 
@@ -120,7 +106,7 @@ a {
   box-shadow: 0px 5px 10px #99e2d0;
 }
 
-.c-dark-green {
+.c-dark-green, .restaurant__sticker {
   color: #008766;
 }
 
@@ -132,8 +118,7 @@ a {
   box-shadow: 0px 5px 10px #008766;
 }
 
-/*Fontes*/
-.f-regular {
+.f-regular, * {
   font-family: "Roboto";
 }
 
@@ -141,15 +126,24 @@ a {
   font-family: "Shrikhand";
 }
 
-.fw-light {
+.fw-light, .course__desc p, .course__name, .restaurant__caption p {
   font-weight: 300;
 }
 
-.fw-bold {
+.fw-bold, .course__desc span, .restaurant__sticker, .user-guide__desc, .button {
   font-weight: 700;
 }
 
-/*Icônes*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
 .i-inline {
   width: 1rem;
   height: 1rem;
@@ -157,21 +151,78 @@ a {
   text-align: center;
 }
 
-/*Logo*/
 .logo {
   width: 40%;
 }
 
-/*Cards*/
-.card {
+.navbar {
+  padding: 1.3rem 1rem 1rem;
+  text-align: center;
+}
+
+.location {
+  padding: 1rem;
+  text-align: center;
+  box-shadow: inset 0px 5px 5px #dadada;
+}
+
+.about {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.about p {
+  margin: 2rem 0;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  padding: 1.4rem 1.8rem;
+  font-size: 1rem;
+  border: hidden;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+}
+
+.user-guide {
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+}
+.user-guide__step {
+  display: inline-block;
+  height: 21px;
+  width: 25px;
+  margin-left: -1.5rem;
+  margin-right: 1rem;
+  padding-top: 0.3rem;
+  border-radius: 12.5px;
+  text-align: center;
+  font-size: small;
+}
+.user-guide__desc {
+  list-style: none;
+  padding: 1.75rem 1rem;
+  margin: 1.5rem 0;
+  border-radius: 25px;
+}
+
+.hero {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+
+.restaurants {
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+}
+
+.restaurant {
   position: relative;
   height: 250px;
-  margin-top: 1.5rem;
-  background-color: white;
+  margin: 1.25rem 0;
   border-radius: 25px;
   overflow: hidden;
 }
-.card__sticker {
+.restaurant__sticker {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -181,97 +232,25 @@ a {
   text-align: center;
   font-size: 0.7rem;
 }
-.card__illustration {
+.restaurant__illustration {
   height: 170px;
   width: 100%;
   object-fit: cover;
 }
-.card__caption {
+.restaurant__caption {
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.card__like {
+.restaurant__like {
   font-size: 2rem;
-}
-
-/*Listes*/
-.list {
-  margin-top: 1.5rem;
-}
-.list__item {
-  display: block;
-  margin-bottom: 1.5rem;
-  padding: 1.5rem 2rem;
-  border-radius: 25px;
-  overflow: hidden;
-}
-.list__ordered {
-  margin-left: 0.5rem;
-}
-.list__bullet {
-  display: inline-block;
-  color: white;
-  height: 21px;
-  width: 25px;
-  margin-left: -2.5rem;
-  margin-right: 1rem;
-  padding-top: 0.3rem;
-  border-radius: 12.5px;
-  text-align: center;
-  font-size: small;
-}
-
-/*Bouton*/
-.button {
-  display: block;
-  margin: 0 auto;
-  padding: 1.4rem 1.8rem;
-  font-size: 1rem;
-  color: white;
-  border: hidden;
-  border-radius: 50px;
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-}
-
-/*Blocs*/
-.b-padding {
-  padding: 2rem 1.5rem;
-}
-
-.navbar {
-  text-align: center;
-  padding: 1rem 0 0.5rem 0;
-}
-
-.location {
-  text-align: center;
-  padding: 1rem;
-  box-shadow: inset 0px 5px 5px #dadada;
-}
-
-.about {
-  text-align: center;
-  padding: 2rem;
-}
-.about p {
-  margin: 2rem 0;
-}
-
-.hero {
-  width: 100%;
-  height: 25vh;
-  object-fit: cover;
-}
-
-.user-guide {
-  padding: 3rem 2rem 2rem;
 }
 
 .menu {
   position: relative;
   margin-top: -2rem;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
   border-radius: 30px 30px 0 0;
 }
 .menu h1 {
@@ -283,8 +262,13 @@ a {
   text-transform: uppercase;
 }
 .course__choice {
+  list-style: none;
   background-color: white;
-  display: flex;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 25px;
+  overflow: hidden;
+  overflow: visible;
 }
 .course__desc {
   display: flex;
@@ -299,24 +283,12 @@ a {
 .course__desc :not(h3) {
   font-size: 0.75rem;
 }
-.course__sel {
-  margin: -1.5rem -2rem -1.5rem 2rem;
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-}
-
 .footer {
-  color: white;
-}
-.footer__links {
-  padding: 1.5rem 1.5rem 0.75rem;
+  padding: 1.5rem 1.5rem 1rem;
 }
 .footer__link {
-  display: block;
-  margin-bottom: 0.75rem;
+  list-style: none;
+  margin: 0.5rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
