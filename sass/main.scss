@@ -169,26 +169,37 @@ a{
 }
 .course{
     &__name{
+        position: relative;
         @extend .fw-light;
         font-size: .9rem;
         text-transform: uppercase;
     }
+    &__name::after{
+        content: "";
+        width: 2.5rem;
+        height: .1rem;
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        @extend .bg-green;
+    }
     &__choice{
         @extend .sh-grey;
+        display: flex;
+        justify-content: space-between;
         list-style: none;
         background-color: white;
         margin: 1.5rem 0;
         padding: 1rem;
         border-radius: 25px;
         overflow: hidden;
-        overflow: visible;
     }
     &__desc{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-basis: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         h3{
-            flex-basis: 100%;
             font-size: 1rem;
             margin-bottom: .25rem;
         }
@@ -200,6 +211,32 @@ a{
         }
         span{
             @extend .fw-bold;
+        }
+    }
+    &__price{
+        @extend .fw-light;
+        align-self: flex-end;
+        margin: 0 1rem;
+    }
+    &__sel{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 6rem;
+        margin: -1rem -6.2rem -1rem 0;
+        transition-duration: 0.5s;
+        @extend .c-white;
+        @extend .bg-green;
+        i{
+            font-size: 1.5rem;
+            transform: rotate(180deg);
+            transition-duration: 0.5s;
+        }
+    }
+    &__choice:hover &__sel{
+        margin: -1rem -1rem -1rem 0;
+        i{
+            transform: rotate(0);
         }
     }
 }

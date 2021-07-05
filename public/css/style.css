@@ -1,4 +1,4 @@
-.c-white, .restaurant, .user-guide__step, .button {
+.c-white, .course__sel, .restaurant, .user-guide__step, .button {
   color: #fff;
 }
 
@@ -98,7 +98,7 @@
   color: #99e2d0;
 }
 
-.bg-green, .restaurant__sticker {
+.bg-green, .course__sel, .course__name::after, .restaurant__sticker {
   background-color: #99e2d0;
 }
 
@@ -126,7 +126,7 @@
   font-family: "Shrikhand";
 }
 
-.fw-light, .course__desc p, .course__name, .restaurant__caption p {
+.fw-light, .course__price, .course__desc p, .course__name, .restaurant__caption p {
   font-weight: 300;
 }
 
@@ -258,31 +258,65 @@ a {
 }
 
 .course__name {
+  position: relative;
   font-size: 0.9rem;
   text-transform: uppercase;
 }
+.course__name::after {
+  content: "";
+  width: 2.5rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+}
 .course__choice {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   background-color: white;
   margin: 1.5rem 0;
   padding: 1rem;
   border-radius: 25px;
   overflow: hidden;
-  overflow: visible;
 }
 .course__desc {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-basis: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .course__desc h3 {
-  flex-basis: 100%;
   font-size: 1rem;
   margin-bottom: 0.25rem;
 }
 .course__desc :not(h3) {
   font-size: 0.75rem;
 }
+.course__price {
+  align-self: flex-end;
+  margin: 0 1rem;
+}
+.course__sel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 6rem;
+  margin: -1rem -6.2rem -1rem 0;
+  transition-duration: 0.5s;
+}
+.course__sel i {
+  font-size: 1.5rem;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+.course__choice:hover .course__sel {
+  margin: -1rem -1rem -1rem 0;
+}
+.course__choice:hover .course__sel i {
+  transform: rotate(0);
+}
+
 .footer {
   padding: 1.5rem 1.5rem 1rem;
 }
