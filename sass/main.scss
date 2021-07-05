@@ -27,6 +27,7 @@ $fonts:(
 );
 $weights:(
     light: 300,
+    regular: 400,
     bold: 700
 );
 @each $font, $name in $fonts{
@@ -63,14 +64,17 @@ a{
     text-align: center;
 }
 .location{
+    @extend .bg-light-brown;
     padding: 1rem;
     text-align: center;
     box-shadow: inset 0px 5px 5px #dadada;
 }
 .about{
+    @extend .bg-light-grey;
     padding: 3rem 1.5rem;
     text-align: center;
     p{
+        @extend .fw-light;
         margin: 2rem 0;
     }
 }
@@ -109,6 +113,9 @@ a{
         padding: 1.75rem 1rem;
         margin: 1.5rem 0;
         border-radius: 25px;
+        i{
+            @extend .c-dark-grey;
+        }
     }
 }
 .hero{
@@ -117,6 +124,7 @@ a{
     object-fit: cover;
 }
 .restaurants{
+    @extend .bg-light-grey;
     padding: 3rem 1.5rem 1.5rem 1.5rem;
 }
 .restaurant{
@@ -159,12 +167,15 @@ a{
     }
 }
 .menu{
+    @extend .bg-light-grey;
     position: relative;
     margin-top: -2rem;
     padding: 1.5rem 1.5rem 3rem 1.5rem;
     border-radius: 30px 30px 0 0;
     h1{
         margin-bottom: 1rem;
+        @extend .f-fancy;
+        @extend .fw-regular;
     }
 }
 .course{
@@ -203,14 +214,9 @@ a{
             font-size: 1rem;
             margin-bottom: .25rem;
         }
-        :not(h3){
-            font-size: .75rem;
-        }
         p{
             @extend .fw-light;
-        }
-        span{
-            @extend .fw-bold;
+            font-size: .75rem;
         }
     }
     &__price{
@@ -241,6 +247,8 @@ a{
     }
 }
 .footer{
+    @extend .c-white;
+    @extend .bg-coal;
     padding: 1.5rem 1.5rem 1rem;
     &__link{
         list-style: none;
