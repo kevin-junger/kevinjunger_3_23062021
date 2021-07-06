@@ -27,6 +27,7 @@ $fonts:(
 );
 $weights:(
     light: 300,
+    regular: 400,
     bold: 700
 );
 @each $font, $name in $fonts{
@@ -48,7 +49,36 @@ a{
     color: black;
     text-decoration: none;
 }
-
+@keyframes loader {
+    100%{
+        opacity: 0;
+        z-index: -10;
+    }
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.loader{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loader 1s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    &__logo{
+        width: 40vw;
+        animation: fade 1.75s;
+    }
+}
 .i-inline{
     width: 1rem;
     height: 1rem;
@@ -58,19 +88,25 @@ a{
 .logo{
     width: 40%;
 }
+.container{
+    animation: fade 1s;
+}
 .navbar{
     padding: 1.3rem 1rem 1rem;
     text-align: center;
 }
 .location{
+    @extend .bg-light-brown;
     padding: 1rem;
     text-align: center;
     box-shadow: inset 0px 5px 5px #dadada;
 }
 .about{
+    @extend .bg-light-grey;
     padding: 3rem 1.5rem;
     text-align: center;
     p{
+        @extend .fw-light;
         margin: 2rem 0;
     }
 }
@@ -85,6 +121,10 @@ a{
     border: hidden;
     border-radius: 50px;
     background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    transition-duration: 0.5s;
+}
+.button:hover{
+    @extend .sh-dark-grey;
 }
 .user-guide{
     padding: 3rem 1.5rem 1.5rem 1.5rem;
@@ -109,6 +149,9 @@ a{
         padding: 1.75rem 1rem;
         margin: 1.5rem 0;
         border-radius: 25px;
+        i{
+            @extend .c-dark-grey;
+        }
     }
 }
 .hero{
@@ -117,6 +160,7 @@ a{
     object-fit: cover;
 }
 .restaurants{
+    @extend .bg-light-grey;
     padding: 3rem 1.5rem 1.5rem 1.5rem;
 }
 .restaurant{
@@ -127,6 +171,7 @@ a{
     margin: 1.25rem 0;
     border-radius: 25px;
     overflow: hidden;
+    transition-duration: 0.5s;
     &__sticker{
         @extend .fw-bold;
         @extend .c-dark-green;
@@ -155,16 +200,44 @@ a{
         }
     }
     &__like{
-        font-size: 2rem;
+        i{
+            font-size: 1.75rem;
+            position:absolute;
+            right: 1rem;
+            bottom: 1.5rem;
+        }
+        :first-child{
+            opacity: 1;
+            transition-duration: 0.5s;
+        }
+        :nth-child(2){
+            opacity: 0;
+            transition-duration: 0.5s;
+        }
+    }
+    &__like:hover{
+        :first-child{
+            opacity: 0;
+        }
+        :nth-child(2){
+            @extend .c-purple;
+            opacity: 1;
+        }
     }
 }
+.restaurant:hover{
+    @extend .sh-dark-grey;
+}
 .menu{
+    @extend .bg-light-grey;
     position: relative;
     margin-top: -2rem;
     padding: 1.5rem 1.5rem 3rem 1.5rem;
     border-radius: 30px 30px 0 0;
     h1{
         margin-bottom: 1rem;
+        @extend .f-fancy;
+        @extend .fw-regular;
     }
 }
 .course{
@@ -185,6 +258,7 @@ a{
     }
     &__choice{
         @extend .sh-grey;
+        transition-duration: 0.5s;
         display: flex;
         justify-content: space-between;
         list-style: none;
@@ -193,6 +267,9 @@ a{
         padding: 1rem;
         border-radius: 25px;
         overflow: hidden;
+    }
+    &__choice:hover{
+        @extend .sh-dark-grey;
     }
     &__desc{
         flex-basis: 100%;
@@ -203,14 +280,9 @@ a{
             font-size: 1rem;
             margin-bottom: .25rem;
         }
-        :not(h3){
-            font-size: .75rem;
-        }
         p{
             @extend .fw-light;
-        }
-        span{
-            @extend .fw-bold;
+            font-size: .75rem;
         }
     }
     &__price{
@@ -241,9 +313,13 @@ a{
     }
 }
 .footer{
+    @extend .bg-coal;
     padding: 1.5rem 1.5rem 1rem;
     &__link{
         list-style: none;
         margin: .5rem 0;
+        a{
+            @extend .c-white;
+        }
     }
 }
