@@ -154,7 +154,7 @@ a {
     z-index: -10;
   }
 }
-@keyframes logo {
+@keyframes fade {
   0% {
     opacity: 0;
   }
@@ -176,7 +176,7 @@ a {
 }
 .loader__logo {
   width: 40vw;
-  animation: logo 1.75s;
+  animation: fade 1.75s;
 }
 
 .i-inline {
@@ -188,6 +188,10 @@ a {
 
 .logo {
   width: 40%;
+}
+
+.container {
+  animation: fade 1s;
 }
 
 .navbar {

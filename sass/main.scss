@@ -55,7 +55,7 @@ a{
         z-index: -10;
     }
 }
-@keyframes logo {
+@keyframes fade {
     0%{
         opacity: 0;
     }
@@ -76,7 +76,7 @@ a{
     animation-fill-mode: both;
     &__logo{
         width: 40vw;
-        animation: logo 1.75s;
+        animation: fade 1.75s;
     }
 }
 .i-inline{
@@ -87,6 +87,9 @@ a{
 }
 .logo{
     width: 40%;
+}
+.container{
+    animation: fade 1s;
 }
 .navbar{
     padding: 1.3rem 1rem 1rem;
