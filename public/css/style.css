@@ -1,4 +1,4 @@
-.c-white, .footer, .course__sel, .restaurant, .user-guide__step, .button {
+.c-white, .footer__link a, .course__sel, .restaurant, .user-guide__step, .button {
   color: #fff;
 }
 
@@ -42,7 +42,7 @@
   background-color: #7e7e7e;
 }
 
-.sh-dark-grey {
+.sh-dark-grey, .course__choice:hover, .restaurant:hover, .button:hover {
   box-shadow: 0px 5px 10px #7e7e7e;
 }
 
@@ -70,7 +70,7 @@
   box-shadow: 0px 5px 10px #353535;
 }
 
-.c-purple {
+.c-purple, .restaurant__like:hover :nth-child(2) {
   color: #9356dc;
 }
 
@@ -186,6 +186,7 @@ a {
   border: hidden;
   border-radius: 50px;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  transition-duration: 0.5s;
 }
 
 .user-guide {
@@ -224,6 +225,7 @@ a {
   margin: 1.25rem 0;
   border-radius: 25px;
   overflow: hidden;
+  transition-duration: 0.5s;
 }
 .restaurant__sticker {
   position: absolute;
@@ -246,8 +248,25 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.restaurant__like {
-  font-size: 2rem;
+.restaurant__like i {
+  font-size: 1.75rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 1.5rem;
+}
+.restaurant__like :first-child {
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+.restaurant__like :nth-child(2) {
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+.restaurant__like:hover :first-child {
+  opacity: 0;
+}
+.restaurant__like:hover :nth-child(2) {
+  opacity: 1;
 }
 
 .menu {
@@ -274,6 +293,7 @@ a {
   bottom: -0.5rem;
 }
 .course__choice {
+  transition-duration: 0.5s;
   display: flex;
   justify-content: space-between;
   list-style: none;
