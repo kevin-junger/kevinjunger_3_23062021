@@ -148,6 +148,37 @@ a {
   text-decoration: none;
 }
 
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes logo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader 1s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+.loader__logo {
+  width: 40vw;
+  animation: logo 1.75s;
+}
+
 .i-inline {
   width: 1rem;
   height: 1rem;
