@@ -1,83 +1,19 @@
-$colours:(
-    white: #fff,
-    light-grey: #f6f6f6,
-    grey: #dadada,
-    dark-grey: #7e7e7e,
-    light-brown: #eaeaea,
-    coal: #353535,
-    purple: #9356dc,
-    pink: #ff79da,
-    green: #99e2d0,
-    dark-green: #008766
-);
-@each $colour, $hex in $colours{
-    .c-#{$colour}{
-        color: $hex;
-    }
-    .bg-#{$colour}{
-        background-color: $hex;
-    }
-    .sh-#{$colour}{
-        box-shadow: 0px 5px 10px $hex;
-    }
-}
-$fonts:(
-    regular: 'Roboto',
-    fancy: 'Shrikhand'
-);
-$weights:(
-    light: 300,
-    regular: 400,
-    bold: 700
-);
-@each $font, $name in $fonts{
-    .f-#{$font}{
-        font-family: '#{$name}';
-    }
-}
-@each $weight, $value in $weights{
-    .fw-#{$weight}{
-        font-weight: #{$value};
-    }
-}
+@import "colors";
+@import "fonts";
+@import "loader";
+@import "landing";
+@import "restaurants";
+@import "menus";
+@import "button";
+@import "animations";
 *{
     margin: 0;
     padding: 0;
-    @extend .f-regular;
-}
-a{
-    color: black;
+    @include font-choice($text);
     text-decoration: none;
 }
-@keyframes loader {
-    100%{
-        opacity: 0;
-        z-index: -10;
-    }
-}
-@keyframes fade {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-.loader{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: loader 1s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    &__logo{
-        width: 40vw;
-        animation: fade 1.75s;
-    }
+a{
+    @include color-choice(#000);
 }
 .i-inline{
     width: 1rem;
@@ -88,238 +24,18 @@ a{
 .logo{
     width: 40%;
 }
-.container{
-    animation: fade 1s;
-}
 .navbar{
     padding: 1.3rem 1rem 1rem;
     text-align: center;
 }
-.location{
-    @extend .bg-light-brown;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: inset 0px 5px 5px #dadada;
-}
-.about{
-    @extend .bg-light-grey;
-    padding: 3rem 1.5rem;
-    text-align: center;
-    p{
-        @extend .fw-light;
-        margin: 2rem 0;
-    }
-}
-.button{
-    @extend .c-white;
-    @extend .fw-bold;
-    @extend .sh-grey;
-    display: block;
-    margin: 0 auto;
-    padding: 1.4rem 1.8rem;
-    font-size: 1rem;
-    border: hidden;
-    border-radius: 50px;
-    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-    transition-duration: 0.5s;
-}
-.button:hover{
-    @extend .sh-dark-grey;
-}
-.user-guide{
-    padding: 3rem 1.5rem 1.5rem 1.5rem;
-    &__step{
-        @extend .c-white;
-        @extend .bg-purple;
-        display: inline-block;
-        height: 21px;
-        width: 25px;
-        margin-left: -1.5rem;
-        margin-right: 1rem;
-        padding-top: .3rem;
-        border-radius: 12.5px;
-        text-align: center;
-        font-size: small;
-    }
-    &__desc{
-        @extend .bg-light-grey;
-        @extend .sh-grey;
-        @extend .fw-bold;
-        list-style: none;
-        padding: 1.75rem 1rem;
-        margin: 1.5rem 0;
-        border-radius: 25px;
-        i{
-            @extend .c-dark-grey;
-        }
-    }
-}
-.hero{
-    width: 100%;
-    height: 25vh;
-    object-fit: cover;
-}
-.restaurants{
-    @extend .bg-light-grey;
-    padding: 3rem 1.5rem 1.5rem 1.5rem;
-}
-.restaurant{
-    @extend .c-white;
-    @extend .sh-grey;
-    position: relative;
-    height: 250px;
-    margin: 1.25rem 0;
-    border-radius: 25px;
-    overflow: hidden;
-    transition-duration: 0.5s;
-    &__sticker{
-        @extend .fw-bold;
-        @extend .c-dark-green;
-        @extend .bg-green;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        width: 50px;
-        padding: .5rem;
-        border-radius: 5px;
-        text-align: center;
-        font-size: 0.7rem;
-    }
-    &__illustration{
-        height: 170px;
-        width: 100%;
-        object-fit: cover;
-    }
-    &__caption{
-        padding: 1rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        p{
-            @extend .fw-light;
-        }
-    }
-    &__like{
-        i{
-            font-size: 1.75rem;
-            position:absolute;
-            right: 1rem;
-            bottom: 1.5rem;
-        }
-        :first-child{
-            opacity: 1;
-            transition-duration: 0.5s;
-        }
-        :nth-child(2){
-            opacity: 0;
-            transition-duration: 0.5s;
-        }
-    }
-    &__like:hover{
-        :first-child{
-            opacity: 0;
-        }
-        :nth-child(2){
-            @extend .c-purple;
-            opacity: 1;
-        }
-    }
-}
-.restaurant:hover{
-    @extend .sh-dark-grey;
-}
-.menu{
-    @extend .bg-light-grey;
-    position: relative;
-    margin-top: -2rem;
-    padding: 1.5rem 1.5rem 3rem 1.5rem;
-    border-radius: 30px 30px 0 0;
-    h1{
-        margin-bottom: 1rem;
-        @extend .f-fancy;
-        @extend .fw-regular;
-    }
-}
-.course{
-    &__name{
-        position: relative;
-        @extend .fw-light;
-        font-size: .9rem;
-        text-transform: uppercase;
-    }
-    &__name::after{
-        content: "";
-        width: 2.5rem;
-        height: .1rem;
-        position: absolute;
-        left: 0;
-        bottom: -.5rem;
-        @extend .bg-green;
-    }
-    &__choice{
-        @extend .sh-grey;
-        transition-duration: 0.5s;
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        background-color: white;
-        margin: 1.5rem 0;
-        padding: 1rem;
-        border-radius: 25px;
-        overflow: hidden;
-    }
-    &__choice:hover{
-        @extend .sh-dark-grey;
-    }
-    &__desc{
-        flex-basis: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        h3{
-            font-size: 1rem;
-            margin-bottom: .25rem;
-        }
-        p{
-            @extend .fw-light;
-            font-size: .75rem;
-        }
-    }
-    &__price{
-        @extend .fw-light;
-        align-self: flex-end;
-        margin: 0 1rem;
-    }
-    &__sel{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-basis: 6rem;
-        margin: -1rem -6.2rem -1rem 0;
-        transition-duration: 0.5s;
-        @extend .c-white;
-        @extend .bg-green;
-        i{
-            font-size: 1.5rem;
-            transform: rotate(180deg);
-            transition-duration: 0.5s;
-        }
-    }
-    &__choice:hover &__sel{
-        margin: -1rem -1rem -1rem 0;
-        i{
-            transform: rotate(0);
-        }
-    }
-}
 .footer{
-    @extend .bg-coal;
+    @include color-choice(inherit,$grey-5);
     padding: 1.5rem 1.5rem 1rem;
     &__link{
         list-style: none;
         margin: .5rem 0;
         a{
-            @extend .c-white;
+            @include color-choice(#fff,inherit);
         }
     }
 }

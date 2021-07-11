@@ -1,0 +1,17 @@
+.loader{
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loader 1s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    &__logo{
+        width: 40vw;
+        animation: fade 1.75s;
+    }
+}

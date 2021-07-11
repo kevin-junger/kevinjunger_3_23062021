@@ -1,0 +1,10 @@
+$text: 'Roboto';
+$fancy: 'Shrikhand';
+$light: 300;
+$regular: 400;
+$bold: 700;
+@mixin font-choice($font: $text, $weight: $regular, $size: 1rem){
+    font-family: $font;
+    font-weight: $weight;
+    font-size: $size;
+}
