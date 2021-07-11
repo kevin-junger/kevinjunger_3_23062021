@@ -86,7 +86,7 @@ a {
   border-radius: 50px;
   transition-duration: 0.5s;
 }
-.button :hover {
+.button:hover {
   color: #fff;
   background-color: transparent;
   box-shadow: 0 5px 10px #7e7e7e;
