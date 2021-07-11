@@ -18,7 +18,14 @@ a{
 }
 @import "loader";
 .logo{
-    width: 40%;
+    @include font-choice($fancy,$regular,1.5rem);
+    margin: 0 auto;
+    &__white{
+        @include color-choice(#fff);
+    }
+    &__big{
+        font-size: 2.5rem;
+    }
 }
 .navbar{
     padding: 1.3rem 1rem 1rem;
