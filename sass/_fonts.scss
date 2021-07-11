@@ -1,0 +1,13 @@
+//Font families
+$text: 'Roboto';
+$fancy: 'Shrikhand';
+//Font weights
+$light: 300;
+$regular: 400;
+$bold: 700;
+//Font mixin - default values if unset: Roboto 400 1rem
+@mixin font-choice($font: $text, $weight: $regular, $size: 1rem){
+    font-family: $font;
+    font-weight: $weight;
+    font-size: $size;
+}

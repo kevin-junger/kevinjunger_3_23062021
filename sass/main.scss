@@ -1,67 +1,14 @@
-$colours:(
-    white: #fff,
-    light-grey: #f6f6f6,
-    grey: #dadada,
-    dark-grey: #7e7e7e,
-    light-brown: #eaeaea,
-    coal: #353535,
-    purple: #9356dc,
-    pink: #ff79da,
-    green: #99e2d0,
-    dark-green: #008766
-);
-@each $colour, $hex in $colours{
-    .c-#{$colour}{
-        color: $hex;
-    }
-    .bg-#{$colour}{
-        background-color: $hex;
-    }
-    .sh-#{$colour}{
-        box-shadow: 0px 5px 10px $hex;
-    }
-}
-$fonts:(
-    regular: 'Roboto',
-    fancy: 'Shrikhand'
-);
-$weights:(
-    light: 300,
-    regular: 400,
-    bold: 700
-);
-@each $font, $name in $fonts{
-    .f-#{$font}{
-        font-family: '#{$name}';
-    }
-}
-@each $weight, $value in $weights{
-    .fw-#{$weight}{
-        font-weight: #{$value};
-    }
-}
+@import "animations";
+@import "colors";
+@import "fonts";
 *{
     margin: 0;
     padding: 0;
-    @extend .f-regular;
+    @include font-choice($text);
 }
 a{
     color: black;
     text-decoration: none;
-}
-@keyframes loader {
-    100%{
-        opacity: 0;
-        z-index: -10;
-    }
-}
-@keyframes fade {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
 }
 .loader{
     position: fixed;
@@ -106,19 +53,21 @@ a{
     @extend .bg-light-grey;
     padding: 3rem 1.5rem;
     text-align: center;
+    h1{
+        @include font-choice($text,$bold,1.5rem);
+    }
     p{
-        @extend .fw-light;
+        @include font-choice($text,$light);
         margin: 2rem 0;
     }
 }
 .button{
+    @include font-choice($text,$bold);
     @extend .c-white;
-    @extend .fw-bold;
     @extend .sh-grey;
     display: block;
     margin: 0 auto;
     padding: 1.2rem 1.8rem;
-    font-size: 1rem;
     border: hidden;
     border-radius: 50px;
     background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
@@ -129,6 +78,9 @@ a{
 }
 .user-guide{
     padding: 3rem 1.5rem 1.5rem 1.5rem;
+    h2{
+        @include font-choice($text,$bold,1.5rem);
+    }
     &__step{
         @extend .c-white;
         @extend .bg-purple;
@@ -140,12 +92,12 @@ a{
         padding-top: .3rem;
         border-radius: 12.5px;
         text-align: center;
-        font-size: small;
+        font-size: .8rem;
     }
     &__desc{
+        @include font-choice($text,$bold);
         @extend .bg-light-grey;
         @extend .sh-grey;
-        @extend .fw-bold;
         list-style: none;
         padding: 1.75rem 1rem;
         margin: 1.5rem 0;
@@ -157,10 +109,13 @@ a{
 }
 .hero{
     width: 100%;
-    height: 25vh;
+    height: 250px;
     object-fit: cover;
 }
 .restaurants{
+    h2{
+        @include font-choice($text,$bold,1.5rem);
+    }
     @extend .bg-light-grey;
     padding: 3rem 1.5rem 1.5rem 1.5rem;
 }
@@ -173,7 +128,7 @@ a{
     border-radius: 25px;
     overflow: hidden;
     &__sticker{
-        @extend .fw-bold;
+        @include font-choice($text,$bold);
         @extend .c-dark-green;
         @extend .bg-green;
         position: absolute;
@@ -195,8 +150,11 @@ a{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        h3{
+            @include font-choice($text,$bold);
+        }
         p{
-            @extend .fw-light;
+            @include font-choice($text,$light);
         }
     }
     &__like{
@@ -233,15 +191,13 @@ a{
     border-radius: 30px 30px 0 0;
     h1{
         margin-bottom: 1rem;
-        @extend .f-fancy;
-        @extend .fw-regular;
+        @include font-choice($fancy,$regular,1.5rem);
     }
 }
 .course{
     &__name{
+        @include font-choice($text,$light,.9rem);
         position: relative;
-        @extend .fw-light;
-        font-size: .9rem;
         text-transform: uppercase;
     }
     &__name::after{
@@ -274,12 +230,11 @@ a{
             margin-bottom: .25rem;
         }
         p{
-            @extend .fw-light;
-            font-size: .75rem;
+            @include font-choice($text,$light,.75rem);
         }
     }
     &__price{
-        @extend .fw-light;
+        @include font-choice($text,$light);
         align-self: flex-end;
         margin: 0 1rem;
     }
