@@ -184,6 +184,7 @@ a {
   color: inherit;
   background-color: #fff;
   box-shadow: 0 5px 10px #dadada;
+  display: block;
   position: relative;
   height: 250px;
   margin: 1.25rem 0;
@@ -365,7 +366,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-basis: 6rem;
-  margin: -1rem -6.2rem -1rem 0;
+  margin: -1rem -6.3rem -1rem 0;
   transition-duration: 0.5s;
 }
 .course__sel i {
@@ -394,6 +395,23 @@ a {
   color: #fff;
   background-color: inherit;
   box-shadow: 0 5px 10px transparent;
+}
+
+@media screen and (min-width: 425px) {
+  .course__sel {
+    margin: -1rem -6.8rem -1rem 0;
+  }
+}
+@media screen and (min-width: 650px) {
+  .restaurants section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .course ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
