@@ -8,8 +8,8 @@
     border: hidden;
     border-radius: 50px;
     transition-duration: 0.5s;
-}
-.button:hover{
-    @include color-choice(#fff,transparent,$grey-4);
-    @include gradient-lighten();
+    &:hover{
+        @include color-choice(#fff,transparent,$grey-4);
+        @include gradient-lighten();
+    }
 }
