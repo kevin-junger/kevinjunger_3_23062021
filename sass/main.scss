@@ -5,10 +5,10 @@
     margin: 0;
     padding: 0;
     @include font-choice($text);
+    text-decoration: none;
 }
 a{
-    color: black;
-    text-decoration: none;
+    @include color-choice(#000);
 }
 .loader{
     position: fixed;
@@ -44,13 +44,13 @@ a{
     text-align: center;
 }
 .location{
-    @extend .bg-light-brown;
+    @include color-choice(inherit,$grey-3);
     padding: 1rem;
     text-align: center;
     box-shadow: inset 0px 5px 5px #dadada;
 }
 .about{
-    @extend .bg-light-grey;
+    @include color-choice(inherit,$grey-1);
     padding: 3rem 1.5rem;
     text-align: center;
     h1{
@@ -62,19 +62,19 @@ a{
     }
 }
 .button{
+    @include color-choice(#fff,transparent,$grey-2);
+    @include gradient();
     @include font-choice($text,$bold);
-    @extend .c-white;
-    @extend .sh-grey;
     display: block;
     margin: 0 auto;
     padding: 1.2rem 1.8rem;
     border: hidden;
     border-radius: 50px;
-    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
     transition-duration: 0.5s;
 }
 .button:hover{
-    @extend .sh-dark-grey;
+    @include color-choice(#fff,transparent,$grey-4);
+    @include gradient-lighten();
 }
 .user-guide{
     padding: 3rem 1.5rem 1.5rem 1.5rem;
@@ -82,8 +82,8 @@ a{
         @include font-choice($text,$bold,1.5rem);
     }
     &__step{
-        @extend .c-white;
-        @extend .bg-purple;
+        @include color-choice(#fff,$primary);
+        @include font-choice($text,$bold,.8rem);
         display: inline-block;
         height: 21px;
         width: 25px;
@@ -92,18 +92,16 @@ a{
         padding-top: .3rem;
         border-radius: 12.5px;
         text-align: center;
-        font-size: .8rem;
     }
     &__desc{
+        @include color-choice(inherit,$grey-1,$grey-2);
         @include font-choice($text,$bold);
-        @extend .bg-light-grey;
-        @extend .sh-grey;
         list-style: none;
         padding: 1.75rem 1rem;
         margin: 1.5rem 0;
         border-radius: 25px;
         i{
-            @extend .c-dark-grey;
+            @include color-choice($grey-4);
         }
     }
 }
@@ -113,32 +111,29 @@ a{
     object-fit: cover;
 }
 .restaurants{
+    @include color-choice(inherit,$grey-1);
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
     h2{
         @include font-choice($text,$bold,1.5rem);
     }
-    @extend .bg-light-grey;
-    padding: 3rem 1.5rem 1.5rem 1.5rem;
 }
 .restaurant{
-    @extend .c-white;
-    @extend .sh-grey;
+    @include color-choice(inherit,#fff,$grey-2);
     position: relative;
     height: 250px;
     margin: 1.25rem 0;
     border-radius: 25px;
     overflow: hidden;
     &__sticker{
-        @include font-choice($text,$bold);
-        @extend .c-dark-green;
-        @extend .bg-green;
+        @include color-choice($tertiary-darker,$tertiary);
+        @include font-choice($text,$bold,.7rem);
         position: absolute;
         top: 1rem;
         right: 1rem;
         width: 50px;
         padding: .5rem;
-        border-radius: 5px;
+        border-radius: 3px;
         text-align: center;
-        font-size: 0.7rem;
     }
     &__illustration{
         height: 170px;
@@ -178,20 +173,20 @@ a{
             opacity: 0;
         }
         :nth-child(2){
-            @extend .c-purple;
+            @include color-choice($primary);
             opacity: 1;
         }
     }
 }
 .menu{
-    @extend .bg-light-grey;
+    @include color-choice(inherit,$grey-1);
     position: relative;
     margin-top: -2rem;
     padding: 1.25rem 1.25rem 2.75rem 1.25rem;
     border-radius: 30px 30px 0 0;
     h1{
-        margin-bottom: 1rem;
         @include font-choice($fancy,$regular,1.5rem);
+        margin-bottom: 1rem;
     }
 }
 .course{
@@ -207,14 +202,13 @@ a{
         position: absolute;
         left: 0;
         bottom: -.5rem;
-        @extend .bg-green;
+        @include color-choice(transparent,$tertiary);
     }
     &__choice{
-        @extend .sh-grey;
+        @include color-choice(inherit,#fff,$grey-2);
         display: flex;
         justify-content: space-between;
         list-style: none;
-        background-color: white;
         margin: 1.5rem 0;
         padding: 1rem;
         border-radius: 25px;
@@ -239,14 +233,13 @@ a{
         margin: 0 1rem;
     }
     &__sel{
+        @include color-choice(#fff,$tertiary);
         display: flex;
         align-items: center;
         justify-content: center;
         flex-basis: 6rem;
         margin: -1rem -6.2rem -1rem 0;
         transition-duration: 0.5s;
-        @extend .c-white;
-        @extend .bg-green;
         i{
             font-size: 1.5rem;
             transform: rotate(180deg);
@@ -261,13 +254,13 @@ a{
     }
 }
 .footer{
-    @extend .bg-coal;
+    @include color-choice(inherit,$grey-5);
     padding: 1.5rem 1.5rem 1rem;
     &__link{
         list-style: none;
         margin: .5rem 0;
         a{
-            @extend .c-white;
+            @include color-choice(#fff,inherit);
         }
     }
 }

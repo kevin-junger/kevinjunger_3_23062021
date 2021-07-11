@@ -12,137 +12,19 @@
     opacity: 1;
   }
 }
-.c-white, .footer__link a, .course__sel, .restaurant, .user-guide__step, .button {
-  color: #fff;
-}
-
-.bg-white {
-  background-color: #fff;
-}
-
-.sh-white {
-  box-shadow: 0px 5px 10px #fff;
-}
-
-.c-light-grey {
-  color: #f6f6f6;
-}
-
-.bg-light-grey, .menu, .restaurants, .user-guide__desc, .about {
-  background-color: #f6f6f6;
-}
-
-.sh-light-grey {
-  box-shadow: 0px 5px 10px #f6f6f6;
-}
-
-.c-grey {
-  color: #dadada;
-}
-
-.bg-grey {
-  background-color: #dadada;
-}
-
-.sh-grey, .course__choice, .restaurant, .user-guide__desc, .button {
-  box-shadow: 0px 5px 10px #dadada;
-}
-
-.c-dark-grey, .user-guide__desc i {
-  color: #7e7e7e;
-}
-
-.bg-dark-grey {
-  background-color: #7e7e7e;
-}
-
-.sh-dark-grey, .button:hover {
-  box-shadow: 0px 5px 10px #7e7e7e;
-}
-
-.c-light-brown {
-  color: #eaeaea;
-}
-
-.bg-light-brown, .location {
-  background-color: #eaeaea;
-}
-
-.sh-light-brown {
-  box-shadow: 0px 5px 10px #eaeaea;
-}
-
-.c-coal {
-  color: #353535;
-}
-
-.bg-coal, .footer {
-  background-color: #353535;
-}
-
-.sh-coal {
-  box-shadow: 0px 5px 10px #353535;
-}
-
-.c-purple, .restaurant__like:hover :nth-child(2) {
-  color: #9356dc;
-}
-
-.bg-purple, .user-guide__step {
-  background-color: #9356dc;
-}
-
-.sh-purple {
-  box-shadow: 0px 5px 10px #9356dc;
-}
-
-.c-pink {
-  color: #ff79da;
-}
-
-.bg-pink {
-  background-color: #ff79da;
-}
-
-.sh-pink {
-  box-shadow: 0px 5px 10px #ff79da;
-}
-
-.c-green {
-  color: #99e2d0;
-}
-
-.bg-green, .course__sel, .course__name::after, .restaurant__sticker {
-  background-color: #99e2d0;
-}
-
-.sh-green {
-  box-shadow: 0px 5px 10px #99e2d0;
-}
-
-.c-dark-green, .restaurant__sticker {
-  color: #008766;
-}
-
-.bg-dark-green {
-  background-color: #008766;
-}
-
-.sh-dark-green {
-  box-shadow: 0px 5px 10px #008766;
-}
-
 * {
   margin: 0;
   padding: 0;
   font-family: "Roboto";
   font-weight: 400;
   font-size: 1rem;
+  text-decoration: none;
 }
 
 a {
-  color: black;
-  text-decoration: none;
+  color: #000;
+  background-color: transparent;
+  box-shadow: 0 5px 10px transparent;
 }
 
 .loader {
@@ -184,12 +66,18 @@ a {
 }
 
 .location {
+  color: inherit;
+  background-color: #eaeaea;
+  box-shadow: 0 5px 10px transparent;
   padding: 1rem;
   text-align: center;
   box-shadow: inset 0px 5px 5px #dadada;
 }
 
 .about {
+  color: inherit;
+  background-color: #f6f6f6;
+  box-shadow: 0 5px 10px transparent;
   padding: 3rem 1.5rem;
   text-align: center;
 }
@@ -206,6 +94,10 @@ a {
 }
 
 .button {
+  color: #fff;
+  background-color: transparent;
+  box-shadow: 0 5px 10px #dadada;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   font-family: "Roboto";
   font-weight: 700;
   font-size: 1rem;
@@ -214,8 +106,14 @@ a {
   padding: 1.2rem 1.8rem;
   border: hidden;
   border-radius: 50px;
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   transition-duration: 0.5s;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: transparent;
+  box-shadow: 0 5px 10px #7e7e7e;
+  background: linear-gradient(180deg, #ff93e1 0%, #a16be0 100%);
 }
 
 .user-guide {
@@ -227,6 +125,12 @@ a {
   font-size: 1.5rem;
 }
 .user-guide__step {
+  color: #fff;
+  background-color: #9356dc;
+  box-shadow: 0 5px 10px transparent;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 0.8rem;
   display: inline-block;
   height: 21px;
   width: 25px;
@@ -235,9 +139,11 @@ a {
   padding-top: 0.3rem;
   border-radius: 12.5px;
   text-align: center;
-  font-size: 0.8rem;
 }
 .user-guide__desc {
+  color: inherit;
+  background-color: #f6f6f6;
+  box-shadow: 0 5px 10px #dadada;
   font-family: "Roboto";
   font-weight: 700;
   font-size: 1rem;
@@ -246,6 +152,12 @@ a {
   margin: 1.5rem 0;
   border-radius: 25px;
 }
+.user-guide__desc i {
+  color: #7e7e7e;
+  background-color: transparent;
+  box-shadow: 0 5px 10px transparent;
+}
+
 .hero {
   width: 100%;
   height: 250px;
@@ -253,6 +165,9 @@ a {
 }
 
 .restaurants {
+  color: inherit;
+  background-color: #f6f6f6;
+  box-shadow: 0 5px 10px transparent;
   padding: 3rem 1.5rem 1.5rem 1.5rem;
 }
 .restaurants h2 {
@@ -262,6 +177,9 @@ a {
 }
 
 .restaurant {
+  color: inherit;
+  background-color: #fff;
+  box-shadow: 0 5px 10px #dadada;
   position: relative;
   height: 250px;
   margin: 1.25rem 0;
@@ -269,17 +187,19 @@ a {
   overflow: hidden;
 }
 .restaurant__sticker {
+  color: #008766;
+  background-color: #99e2d0;
+  box-shadow: 0 5px 10px transparent;
   font-family: "Roboto";
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.7rem;
   position: absolute;
   top: 1rem;
   right: 1rem;
   width: 50px;
   padding: 0.5rem;
-  border-radius: 5px;
+  border-radius: 3px;
   text-align: center;
-  font-size: 0.7rem;
 }
 .restaurant__illustration {
   height: 170px;
@@ -320,20 +240,26 @@ a {
   opacity: 0;
 }
 .restaurant__like:hover :nth-child(2) {
+  color: #9356dc;
+  background-color: transparent;
+  box-shadow: 0 5px 10px transparent;
   opacity: 1;
 }
 
 .menu {
+  color: inherit;
+  background-color: #f6f6f6;
+  box-shadow: 0 5px 10px transparent;
   position: relative;
   margin-top: -2rem;
   padding: 1.25rem 1.25rem 2.75rem 1.25rem;
   border-radius: 30px 30px 0 0;
 }
 .menu h1 {
-  margin-bottom: 1rem;
   font-family: "Shrikhand";
   font-weight: 400;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .course__name {
@@ -350,12 +276,17 @@ a {
   position: absolute;
   left: 0;
   bottom: -0.5rem;
+  color: transparent;
+  background-color: #99e2d0;
+  box-shadow: 0 5px 10px transparent;
 }
 .course__choice {
+  color: inherit;
+  background-color: #fff;
+  box-shadow: 0 5px 10px #dadada;
   display: flex;
   justify-content: space-between;
   list-style: none;
-  background-color: white;
   margin: 1.5rem 0;
   padding: 1rem;
   border-radius: 25px;
@@ -384,6 +315,9 @@ a {
   margin: 0 1rem;
 }
 .course__sel {
+  color: #fff;
+  background-color: #99e2d0;
+  box-shadow: 0 5px 10px transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -404,11 +338,19 @@ a {
 }
 
 .footer {
+  color: inherit;
+  background-color: #353535;
+  box-shadow: 0 5px 10px transparent;
   padding: 1.5rem 1.5rem 1rem;
 }
 .footer__link {
   list-style: none;
   margin: 0.5rem 0;
+}
+.footer__link a {
+  color: #fff;
+  background-color: inherit;
+  box-shadow: 0 5px 10px transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
