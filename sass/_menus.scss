@@ -22,6 +22,8 @@
         @include font-choice($text,$light,.9rem);
         position: relative;
         text-transform: uppercase;
+        animation: fade 1s;
+        animation-fill-mode: both;
     }
     &__name::after{
         content: "";
@@ -41,6 +43,14 @@
         padding: 1rem;
         border-radius: 25px;
         overflow: hidden;
+        opacity: 0;
+        animation: slide-in 1s;
+        animation-fill-mode: both;
+    }
+    @for $i from 2 to 10 {
+        .delay-#{$i} {
+            animation-delay: #{$i/5}s;
+        }
     }
     &__desc{
         flex-basis: 100%;
