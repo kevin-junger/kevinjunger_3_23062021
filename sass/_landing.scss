@@ -1,0 +1,47 @@
+.location{
+    @include color-choice(inherit,$grey-3);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: inset 0px 5px 5px #dadada;
+}
+.about{
+    @include color-choice(inherit,$grey-1);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    h1{
+        @include font-choice($text,$bold,1.5rem);
+    }
+    p{
+        @include font-choice($text,$light);
+        margin: 2rem 0;
+    }
+}
+.user-guide{
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    h2{
+        @include font-choice($text,$bold,1.5rem);
+    }
+    &__step{
+        @include color-choice(#fff,$primary);
+        @include font-choice($text,$bold,.8rem);
+        display: inline-block;
+        height: 21px;
+        width: 25px;
+        margin-left: -1.5rem;
+        margin-right: 1rem;
+        padding-top: .3rem;
+        border-radius: 12.5px;
+        text-align: center;
+    }
+    &__desc{
+        @include color-choice(inherit,$grey-1,$grey-2);
+        @include font-choice($text,$bold);
+        list-style: none;
+        padding: 1.75rem 1rem;
+        margin: 1.5rem 0;
+        border-radius: 25px;
+        i{
+            @include color-choice($grey-4);
+        }
+    }
+}

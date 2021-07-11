@@ -1,0 +1,83 @@
+.container{
+    animation: fade 1s;
+}
+.hero{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.menu{
+    @include color-choice(inherit,$grey-1);
+    position: relative;
+    margin-top: -2rem;
+    padding: 1.25rem 1.25rem 2.75rem 1.25rem;
+    border-radius: 30px 30px 0 0;
+    h1{
+        @include font-choice($fancy,$regular,1.5rem);
+        margin-bottom: 1rem;
+    }
+}
+.course{
+    &__name{
+        @include font-choice($text,$light,.9rem);
+        position: relative;
+        text-transform: uppercase;
+    }
+    &__name::after{
+        content: "";
+        width: 2.5rem;
+        height: .1rem;
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        @include color-choice(transparent,$tertiary);
+    }
+    &__choice{
+        @include color-choice(inherit,#fff,$grey-2);
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin: 1.5rem 0;
+        padding: 1rem;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+    &__desc{
+        flex-basis: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        h3{
+            font-size: 1rem;
+            margin-bottom: .25rem;
+        }
+        p{
+            @include font-choice($text,$light,.75rem);
+        }
+    }
+    &__price{
+        @include font-choice($text,$light);
+        align-self: flex-end;
+        margin: 0 1rem;
+    }
+    &__sel{
+        @include color-choice(#fff,$tertiary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 6rem;
+        margin: -1rem -6.2rem -1rem 0;
+        transition-duration: 0.5s;
+        i{
+            font-size: 1.5rem;
+            transform: rotate(180deg);
+            transition-duration: 0.5s;
+        }
+    }
+    &__choice:hover &__sel{
+        margin: -1rem -1rem -1rem 0;
+        i{
+            transform: rotate(0);
+        }
+    }
+}
