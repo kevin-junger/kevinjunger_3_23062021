@@ -10,14 +10,12 @@
     }
     .restaurants{
         &__grid{
-            display: grid;
             grid-template-columns: repeat(2,1fr);
             grid-template-rows: auto;
         }
     }
     .course{
-        ul{
-            display: grid;
+        &__choices{
             grid-template-columns: repeat(2,1fr);
         }
     }
@@ -98,7 +96,7 @@
         }
     }
     .course{
-        ul{
+        &__choices{
             grid-template-columns: repeat(3,1fr);
         }
     }
