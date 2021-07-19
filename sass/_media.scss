@@ -25,7 +25,7 @@
         display: flex;
     }
     .about{
-        flex-basis: 50%;
+        flex-basis: 40%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -52,6 +52,9 @@
         @include color-choice(inherit,$grey-1,$grey-2);
         border-radius: 25px;
         margin-right: 1rem;
+    }
+    .user-guide{
+        padding: 2rem 1rem 0;
     }
     .restaurants{
         @include color-choice(inherit,$grey-1,$grey-2);

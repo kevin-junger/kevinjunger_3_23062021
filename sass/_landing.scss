@@ -37,7 +37,7 @@
         @include color-choice(inherit,$grey-1,$grey-2);
         @include font-choice($text,$bold);
         list-style: none;
-        padding: 1.75rem 1rem;
+        padding: 1.5rem 1rem;
         margin: 1.5rem 0;
         border-radius: 25px;
         i{

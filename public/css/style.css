@@ -164,7 +164,7 @@ a {
   font-weight: 700;
   font-size: 1rem;
   list-style: none;
-  padding: 1.75rem 1rem;
+  padding: 1.5rem 1rem;
   margin: 1.5rem 0;
   border-radius: 25px;
 }
@@ -439,7 +439,7 @@ a {
   }
 
   .about {
-    flex-basis: 50%;
+    flex-basis: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -473,6 +473,10 @@ a {
     box-shadow: 0 5px 10px #dadada;
     border-radius: 25px;
     margin-right: 1rem;
+  }
+
+  .user-guide {
+    padding: 2rem 1rem 0;
   }
 
   .restaurants {
