@@ -7,7 +7,6 @@
 }
 .restaurant{
     @include color-choice(inherit,#fff,$grey-2);
-    display: block;
     position: relative;
     height: 250px;
     margin: 1.25rem 0;

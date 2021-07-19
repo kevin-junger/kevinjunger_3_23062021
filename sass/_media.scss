@@ -1,63 +1,120 @@
-@media screen and (min-width: 425px) {
-    .course{
-        &__sel{
-            margin: -1rem -6.8rem -1rem 0;
-        }
-    }
-}
-@media screen and (min-width: 650px) {
-    header{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    nav{
-        flex-basis: 100%;
-    }
-    .about{
-        flex-basis: 40%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+@media screen and (min-width: 540px) {
     .user-guide{
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        h2{
+            text-align: center;
+        }
+        &__desc{
+            max-width: 60vw;
+            margin: 1.5rem auto;
+        }
     }
     .restaurants{
-        section{
+        &__grid{
             display: grid;
             grid-template-columns: repeat(2,1fr);
-            gap: 1.25rem;
-            padding: 1.5rem 0;
+            grid-template-rows: auto;
         }
-    }
-    .restaurant{
-        margin: 0;
     }
     .course{
         ul{
             display: grid;
             grid-template-columns: repeat(2,1fr);
-            gap: 1.25rem;
-            padding: 1.5rem 0;
-        }
-        &__choice{
-            margin: 0;
         }
     }
 }
-@media screen and (min-width: 900px) {
-    .restaurants {
-        //border-radius: 30px 30px 0 0;
-        margin: 0 auto;
-        max-width: 900px;
+@media screen and (min-width: 768px) {
+    .landing{
+        display: flex;
     }
-    .menu {
-        margin: -2rem auto 0;
-        max-width: 900px;
+    .about{
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .user-guide{
+        flex-grow: 1;
+        &__desc{
+            max-width: 80%;
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .location{
+        @include color-choice(inherit,$grey-1,$grey-2);
+        max-width: 40vw;
+        border-radius: 15px;
+        margin: 1rem auto;
+    }
+    .landing{
+        max-width: 80vw;
+        margin: 3rem auto;
+    }
+    .about{
+        @include color-choice(inherit,$grey-1,$grey-2);
+        border-radius: 25px;
+        margin-right: 1rem;
+    }
+    .restaurants{
+        @include color-choice(inherit,$grey-1,$grey-2);
+        max-width: 80vw;
+        margin: 0 auto 3rem;
+        border-radius: 25px;
+    }
+    .menu{
+        @include color-choice(inherit,$grey-1,$grey-2);
+        max-width: 80vw;
+        margin: -2rem auto 3rem;
+        border-radius: 30px;
+    }
+    .footer{
+        @include color-choice(inherit,$grey-5);
+        box-shadow: 0 -5px 10px $grey-2;
+        max-width: 80vw;
+        margin: 0 auto;
+        border-radius: 25px 25px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        ul{
+            display: flex;
+            margin: 0 auto;
+        }
+        &__link{
+            margin: 1rem 1rem .8rem 0;
+        }
+    }
+}
+@media screen and (min-width: 1366px) {
+    .location{
+        max-width: 580px;
+    }
+    .landing{
+        max-width: 1100px;
+    }
+    .restaurants{
+        &__grid{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    .course{
+        ul{
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .restaurants{
+        max-width: 1440px;
+        &__grid{
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+    .menu{
+        max-width: 1440px;
+    }
+    .footer{
+        max-width: 1440px;
     }
 }
