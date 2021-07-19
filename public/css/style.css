@@ -183,22 +183,25 @@ a {
   color: inherit;
   background-color: #f6f6f6;
   box-shadow: 0 5px 10px transparent;
-  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  padding: 3rem 1.5rem;
 }
 .restaurants h2 {
   font-family: "Roboto";
   font-weight: 700;
   font-size: 1.5rem;
 }
+.restaurants__grid {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
 
 .restaurant {
   color: inherit;
   background-color: #fff;
   box-shadow: 0 5px 10px #dadada;
-  display: block;
   position: relative;
   height: 250px;
-  margin: 1.25rem 0;
   border-radius: 25px;
   overflow: hidden;
 }
@@ -278,7 +281,7 @@ a {
   box-shadow: 0 5px 10px transparent;
   position: relative;
   margin-top: -2rem;
-  padding: 1.25rem 1.25rem 2.75rem 1.25rem;
+  padding: 2rem 1.5rem 3rem;
   border-radius: 30px 30px 0 0;
 }
 .menu h1 {
@@ -308,6 +311,11 @@ a {
   background-color: #99e2d0;
   box-shadow: 0 5px 10px transparent;
 }
+.course__choices {
+  margin: 2rem 0 3rem;
+  display: grid;
+  gap: 1.25rem;
+}
 .course__choice {
   color: inherit;
   background-color: #fff;
@@ -315,7 +323,6 @@ a {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  margin: 1.5rem 0;
   padding: 1rem;
   border-radius: 25px;
   overflow: hidden;
@@ -377,7 +384,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-basis: 6rem;
-  margin: -1rem -6.3rem -1rem 0;
+  margin: -1rem -6.5rem -1rem 0;
   transition-duration: 0.5s;
 }
 .course__sel i {
@@ -408,41 +415,135 @@ a {
   box-shadow: 0 5px 10px transparent;
 }
 
-@media screen and (min-width: 425px) {
-  .course__sel {
-    margin: -1rem -6.8rem -1rem 0;
+@media screen and (min-width: 540px) {
+  .user-guide h2 {
+    text-align: center;
   }
-}
-@media screen and (min-width: 650px) {
-  .restaurants section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  .user-guide__desc {
+    max-width: 60vw;
+    margin: 1.5rem auto;
   }
 
-  .course ul {
-    display: grid;
+  .restaurants__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .course__choices {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (min-width: 900px) {
-  .user-guide {
-    margin: 0 auto;
-    max-width: 900px;
-  }
-  .user-guide ul {
+@media screen and (min-width: 768px) {
+  .landing {
     display: flex;
-    justify-content: space-between;
+  }
+
+  .about {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .user-guide {
+    flex-grow: 1;
+  }
+  .user-guide__desc {
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .location {
+    color: inherit;
+    background-color: #f6f6f6;
+    box-shadow: 0 5px 10px #dadada;
+    max-width: 40vw;
+    border-radius: 15px;
+    margin: 1rem auto;
+  }
+
+  .landing {
+    max-width: 80vw;
+    margin: 3rem auto;
+  }
+
+  .about {
+    color: inherit;
+    background-color: #f6f6f6;
+    box-shadow: 0 5px 10px #dadada;
+    border-radius: 25px;
+    margin-right: 1rem;
   }
 
   .restaurants {
-    border-radius: 30px 30px 0 0;
-    margin: 0 auto;
-    max-width: 900px;
+    color: inherit;
+    background-color: #f6f6f6;
+    box-shadow: 0 5px 10px #dadada;
+    max-width: 80vw;
+    margin: 0 auto 3rem;
+    border-radius: 25px;
   }
 
   .menu {
-    margin: -2rem auto 0;
-    max-width: 900px;
+    color: inherit;
+    background-color: #f6f6f6;
+    box-shadow: 0 5px 10px #dadada;
+    max-width: 80vw;
+    margin: -2rem auto 3rem;
+    border-radius: 30px;
+  }
+
+  .footer {
+    color: inherit;
+    background-color: #353535;
+    box-shadow: 0 5px 10px transparent;
+    box-shadow: 0 -5px 10px #dadada;
+    max-width: 80vw;
+    margin: 0 auto;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footer ul {
+    display: flex;
+    margin: 0 auto;
+  }
+  .footer__link {
+    margin: 1rem 1rem 0.8rem 0;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .location {
+    max-width: 580px;
+  }
+
+  .landing {
+    max-width: 1100px;
+  }
+
+  .restaurants__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .course__choices {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1680px) {
+  .restaurants {
+    max-width: 1440px;
+  }
+  .restaurants__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .menu {
+    max-width: 1440px;
+  }
+
+  .footer {
+    max-width: 1440px;
   }
 }
 

@@ -1,16 +1,19 @@
 .restaurants{
     @include color-choice(inherit,$grey-1);
-    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    padding: 3rem 1.5rem;
     h2{
         @include font-choice($text,$bold,1.5rem);
+    }
+    &__grid{
+        margin-top: 1.5rem;
+        display: grid;
+        gap: 1.25rem;
     }
 }
 .restaurant{
     @include color-choice(inherit,#fff,$grey-2);
-    display: block;
     position: relative;
     height: 250px;
-    margin: 1.25rem 0;
     border-radius: 25px;
     overflow: hidden;
     &__sticker{
