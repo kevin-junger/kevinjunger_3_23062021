@@ -11,7 +11,42 @@
     animation-delay: 2s;
     animation-fill-mode: both;
     &__logo{
-        width: 40vw;
-        animation: fade 1.75s;
+        animation: fade 1s;
+    }
+    &__dots{
+        display: block;
+        position: absolute;
+        top: 55vh;
+        width: 80px;
+        height: 80px;
+        animation: fade 1s;
+        div{
+            position: absolute;
+            top: 33px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        }
+        div:nth-child(1){
+            left: 8px;
+            background: $primary;
+            animation: dot1 0.6s infinite;
+        }
+        div:nth-child(2){
+            left: 8px;
+            background: $secondary;
+            animation: dot2 0.6s infinite;
+        }
+        div:nth-child(3){
+            left: 32px;
+            background: $tertiary;
+            animation: dot2 0.6s infinite;
+        }
+        div:nth-child(4){
+            left: 56px;
+            background: $primary;
+            animation: dot3 0.6s infinite;
+        }
     }
 }
