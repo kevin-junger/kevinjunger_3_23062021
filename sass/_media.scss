@@ -33,7 +33,7 @@
     .user-guide{
         flex-grow: 1;
         &__desc{
-            max-width: 80%;
+            max-width: 70%;
         }
     }
 }
@@ -47,14 +47,17 @@
     .landing{
         max-width: 80vw;
         margin: 3rem auto;
+        justify-content: center;
     }
     .about{
         @include color-choice(inherit,$grey-1,$grey-2);
         border-radius: 25px;
-        margin-right: 1rem;
+        margin-right: 4rem;
     }
     .user-guide{
-        padding: 2rem 1rem 0;
+        padding: 2rem 0 0;
+        flex-grow: 0;
+        flex-basis: 40%;
     }
     .restaurants{
         @include color-choice(inherit,$grey-1,$grey-2);
@@ -62,10 +65,14 @@
         margin: 0 auto 3rem;
         border-radius: 25px;
     }
+    .hero{
+        height: 500px;
+        box-shadow: 0 5px 10px $grey-2;
+    }
     .menu{
         @include color-choice(inherit,$grey-1,$grey-2);
         max-width: 80vw;
-        margin: -2rem auto 3rem;
+        margin: -8rem auto 3rem;
         border-radius: 30px;
     }
     .footer{

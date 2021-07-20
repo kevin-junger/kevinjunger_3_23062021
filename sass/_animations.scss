@@ -1,7 +1,7 @@
 @keyframes loader {
     100%{
         opacity: 0;
-        z-index: -10;
+        z-index: -1;
     }
 }
 @keyframes fade {
@@ -20,5 +20,29 @@
     100%{
         opacity: 1;
         transform: translateY(0) ease-out;
+    }
+}
+@keyframes dot1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes dot2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+@keyframes dot3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
     }
 }
