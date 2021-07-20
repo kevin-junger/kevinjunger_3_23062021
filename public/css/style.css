@@ -1,6 +1,7 @@
 @keyframes loader {
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 @keyframes fade {
@@ -317,9 +318,11 @@ a {
   opacity: 0;
 }
 .restaurant__like:hover :nth-child(2) {
-  color: #9356dc;
-  background-color: transparent;
-  box-shadow: 0 5px 10px transparent;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   opacity: 1;
 }
 
