@@ -40,11 +40,16 @@
         padding: 1.5rem 1rem;
         margin: 1.5rem 0;
         border-radius: 25px;
+        transition-duration: 0.5s;
         i{
             @include color-choice($grey-4);
+            transition-duration: 0.5s;
         }
-        &:last-child i{
-            @include color-choice($primary);
+        &:hover{
+            @include color-choice(inherit,$primary-lighter,$grey-2);
+            i{
+                @include color-choice($primary);
+            }
         }
     }
 }

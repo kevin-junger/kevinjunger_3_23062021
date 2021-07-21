@@ -23,7 +23,7 @@ a{
     &__white{
         @include color-choice(#fff);
     }
-    &__big{
+    &__loader{
         font-size: 2.5rem;
     }
 }
