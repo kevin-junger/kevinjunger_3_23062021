@@ -38,6 +38,11 @@
     }
 }
 @media screen and (min-width: 1024px) {
+    .navbar{
+        .logo{
+            font-size: 2rem;
+        }
+    }
     .location{
         @include color-choice(inherit,$grey-1,$grey-2);
         max-width: 40vw;

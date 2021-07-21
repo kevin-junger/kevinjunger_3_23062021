@@ -46,6 +46,34 @@
     transform: scale(0);
   }
 }
+@keyframes like {
+  0% {
+    background: linear-gradient(180deg, #fff 80%, #ff79da 10%, #9356dc 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25% {
+    background: linear-gradient(180deg, #fff 60%, #ff79da 10%, #9356dc 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(180deg, #fff 40%, #ff79da 10%, #9356dc 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  75% {
+    background: linear-gradient(180deg, #fff 20%, #ff79da 10%, #9356dc 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(180deg, #ff79da 10%, #9356dc 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: transparent;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -132,7 +160,7 @@ a {
   background-color: transparent;
   box-shadow: 0 5px 10px transparent;
 }
-.logo__big {
+.logo__loader {
   font-size: 2.5rem;
 }
 
@@ -226,13 +254,20 @@ a {
   padding: 1.5rem 1rem;
   margin: 1.5rem 0;
   border-radius: 25px;
+  transition-duration: 0.5s;
 }
 .user-guide__desc i {
   color: #7e7e7e;
   background-color: transparent;
   box-shadow: 0 5px 10px transparent;
+  transition-duration: 0.5s;
 }
-.user-guide__desc:last-child i {
+.user-guide__desc:hover {
+  color: inherit;
+  background-color: #f5edff;
+  box-shadow: 0 5px 10px #dadada;
+}
+.user-guide__desc:hover i {
   color: #9356dc;
   background-color: transparent;
   box-shadow: 0 5px 10px transparent;
@@ -267,7 +302,7 @@ a {
 .restaurant__sticker {
   color: #008766;
   background-color: #99e2d0;
-  box-shadow: 0 5px 10px transparent;
+  box-shadow: 0 5px 10px #353535;
   font-family: "Roboto";
   font-weight: 700;
   font-size: 0.7rem;
@@ -300,30 +335,16 @@ a {
   font-weight: 300;
   font-size: 1rem;
 }
-.restaurant__like i {
-  font-size: 1.75rem;
+.restaurant__like--button {
+  font-size: 1.5rem;
   position: absolute;
   right: 1rem;
-  bottom: 1.5rem;
-}
-.restaurant__like :first-child {
-  opacity: 1;
-  transition-duration: 0.5s;
-}
-.restaurant__like :nth-child(2) {
-  opacity: 0;
-  transition-duration: 0.5s;
-}
-.restaurant__like:hover :first-child {
-  opacity: 0;
-}
-.restaurant__like:hover :nth-child(2) {
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  text-fill-color: transparent;
+  bottom: 1.75rem;
+  -webkit-text-stroke: 1px #000;
   -webkit-text-fill-color: transparent;
-  opacity: 1;
+}
+.restaurant__like--button:hover {
+  animation: like 400ms ease-out forwards;
 }
 
 .container {
@@ -514,6 +535,10 @@ a {
   }
 }
 @media screen and (min-width: 1024px) {
+  .navbar .logo {
+    font-size: 2rem;
+  }
+
   .location {
     color: inherit;
     background-color: #f6f6f6;
