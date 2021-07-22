@@ -1,0 +1,19 @@
+.footer{
+    @include color-choice(inherit,$grey-5);
+    padding: 1.5rem 1.5rem 1rem;
+    &__logo{
+        @include color-choice(#fff);
+        @include font-choice($fancy,$regular,1.5rem);
+        margin: 0 auto;
+    }
+    &__links{
+        list-style: none;
+        margin-top: .5rem;
+    }
+    &__link{
+        margin-bottom: .5rem;
+        a{
+            @include color-choice(#fff);
+        }
+    }
+}

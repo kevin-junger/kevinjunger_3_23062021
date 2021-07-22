@@ -1,0 +1,17 @@
+.navbar{
+    padding: 1.3rem 1rem 1rem;
+    text-align: center;
+    &__back{
+        position: absolute;
+        left: 2rem;
+        top: 1.8rem;
+        i{
+            font-size: 1.25rem;
+        }
+    }
+    &__logo{
+        @include font-choice($fancy,$regular,1.5rem);
+        margin: 0 auto;
+    }
+
+}
