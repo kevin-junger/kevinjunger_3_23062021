@@ -39,6 +39,12 @@
 }
 @media screen and (min-width: 1024px) {
     .navbar{
+        &__back{
+            top: 2rem;
+            i{
+                font-size: 1.5rem;
+            }
+        }
         &__logo{
             font-size: 2rem;
         }
@@ -91,8 +97,8 @@
         justify-content: center;
         &__links{
             display: flex;
-            margin: 1rem auto;
-            width: 60%;
+            margin: 1rem auto .5rem;
+            width: 750px;
             justify-content: space-evenly;
         }
     }
