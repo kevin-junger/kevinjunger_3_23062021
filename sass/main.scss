@@ -17,19 +17,14 @@ a{
     text-align: center;
 }
 @import "loader";
-.logo{
-    @include font-choice($fancy,$regular,1.5rem);
-    margin: 0 auto;
-    &__white{
-        @include color-choice(#fff);
-    }
-    &__loader{
-        font-size: 2.5rem;
-    }
-}
 .navbar{
     padding: 1.3rem 1rem 1rem;
     text-align: center;
+    &__logo{
+        @include font-choice($fancy,$regular,1.5rem);
+        margin: 0 auto;
+    }
+
 }
 @import "button";
 @import "landing";
@@ -38,12 +33,17 @@ a{
 .footer{
     @include color-choice(inherit,$grey-5);
     padding: 1.5rem 1.5rem 1rem;
-    &__link{
+    &__logo{
+        @include color-choice(#fff);
+        @include font-choice($fancy,$regular,1.5rem);
+        margin: 0 auto;
+    }
+    &__links{
         list-style: none;
-        margin: .5rem 0;
-        a{
-            @include color-choice(#fff,inherit);
-        }
+        margin: 1rem 0;
+    }
+    &__link{
+        @include color-choice(#fff);
     }
 }
 @import "media";

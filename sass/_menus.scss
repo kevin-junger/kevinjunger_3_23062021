@@ -51,7 +51,7 @@
         animation: slide-in 1s;
         animation-fill-mode: both;
     }
-    @for $i from 2 to 10 {
+    @for $i from 2 to 11 {
         .delay-#{$i} {
             animation-delay: #{$i/5}s;
         }

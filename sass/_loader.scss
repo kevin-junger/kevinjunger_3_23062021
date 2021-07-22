@@ -11,6 +11,8 @@
     animation-delay: 2s;
     animation-fill-mode: both;
     &__logo{
+        @include font-choice($fancy,$regular,2.5rem);
+        margin: 0 auto;
         animation: fade 1s;
     }
     &__dots{
