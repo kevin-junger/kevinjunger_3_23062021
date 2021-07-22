@@ -8,7 +8,7 @@
     @include color-choice(inherit,$grey-1);
     padding: 3rem 1.5rem;
     text-align: center;
-    h1{
+    h2{
         @include font-choice($text,$bold,1.5rem);
     }
     p{
