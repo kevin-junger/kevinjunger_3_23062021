@@ -1,10 +1,20 @@
+//variables fontes
 $text: 'Roboto';
 $fancy: 'Shrikhand';
 $light: 300;
 $regular: 400;
 $bold: 700;
-@mixin font-choice($font: $text, $weight: $regular, $size: 1rem){
+@mixin f-family($font:$text){   //choix fonte
     font-family: $font;
+}
+@mixin f-weight($weight:$regular){  //choix graisse
     font-weight: $weight;
+}
+@mixin f-size($size:1rem){  //choix taille
     font-size: $size;
+}
+@mixin font-choice($font:$text,$weight:$regular,$size:1rem){    //les trois à la fois
+    @include f-family($font);
+    @include f-weight($weight);
+    @include f-size($size);
 }

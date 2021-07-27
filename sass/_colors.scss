@@ -1,3 +1,4 @@
+//variables couleurs
 $grey-1: #f6f6f6;
 $grey-2: #dadada;
 $grey-3: #eaeaea;
@@ -8,14 +9,23 @@ $primary-lighter: #f5edff;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
 $tertiary-darker: #008766;
-@mixin color-choice($font-color:#000,$bg-color:transparent,$sh-color:transparent){
-    color: $font-color;
+@mixin f-color($f-color:black){ //pour changer uniquement la couleur de la fonte
+    color: $f-color;
+}
+@mixin bg-color($bg-color:transparent){ //pour changer uniquement la couleur d'arrière-plan
     background-color: $bg-color;
+}
+@mixin sh-color($sh-color:transparent){ //pour changer uniquement la couleur d'ombre portée
     box-shadow: 0 5px 10px $sh-color;
 }
-@mixin gradient{
+@mixin color-choice($f-color:black,$bg-color:transparent,$sh-color:transparent){ //pour changer les trois en même temps
+    @include f-color($f-color);
+    @include bg-color($bg-color);
+    @include sh-color($sh-color);
+}
+@mixin gradient{ //dégradé utilisé pour les boutons
     background: linear-gradient(180deg, $secondary 0%, $primary 100%);
 }
-@mixin gradient-lighten{
+@mixin gradient-lighten{ //variante plus claire
     background: linear-gradient(180deg, lighten($secondary,5) 0%, lighten($primary,5) 100%);
 }

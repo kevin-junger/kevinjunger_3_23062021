@@ -1,9 +1,9 @@
 .loader{
+    @include bg-color(white);
     position: fixed;
     z-index: 10;
     width: 100vw;
     height: 100vh;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,23 +31,23 @@
             animation-timing-function: cubic-bezier(0, 1, 1, 0);
         }
         div:nth-child(1){
+            @include bg-color($primary);
             left: 8px;
-            background: $primary;
             animation: dot1 0.6s infinite;
         }
         div:nth-child(2){
+            @include bg-color($secondary);
             left: 8px;
-            background: $secondary;
             animation: dot2 0.6s infinite;
         }
         div:nth-child(3){
+            @include bg-color($tertiary);
             left: 32px;
-            background: $tertiary;
             animation: dot2 0.6s infinite;
         }
         div:nth-child(4){
+            @include bg-color($primary);
             left: 56px;
-            background: $primary;
             animation: dot3 0.6s infinite;
         }
     }

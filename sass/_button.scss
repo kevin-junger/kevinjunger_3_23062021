@@ -1,5 +1,5 @@
 .button{
-    @include color-choice(#fff,transparent,$grey-2);
+    @include color-choice(white,transparent,$grey-2);
     @include gradient();
     @include font-choice($text,$bold);
     display: block;
@@ -9,7 +9,7 @@
     border-radius: 50px;
     transition-duration: 0.5s;
     &:hover{
-        @include color-choice(#fff,transparent,$grey-4);
+        @include sh-color($grey-4);
         @include gradient-lighten();
     }
 }

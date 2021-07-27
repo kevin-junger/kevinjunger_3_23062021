@@ -1,15 +1,17 @@
-@import "colors";
-@import "fonts";
-@import "icons";
+//initialisation
 *{
     margin: 0;
     padding: 0;
-    @include font-choice($text);
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
 }
 a{
-    @include color-choice(#000);
+    color: black;
 }
+//import des différents éléments
+@import "colors";
+@import "fonts";
+@import "icons";
 @import "animations";
 @import "loader";
 @import "navbar";

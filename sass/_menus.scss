@@ -7,7 +7,7 @@
     object-fit: cover;
 }
 .menu{
-    @include color-choice(inherit,$grey-1);
+    @include bg-color($grey-1);
     position: relative;
     margin-top: -2rem;
     padding: 2rem 1.5rem 3rem;
@@ -32,7 +32,7 @@
         position: absolute;
         left: 0;
         bottom: -.5rem;
-        @include color-choice(transparent,$tertiary);
+        @include bg-color($tertiary);
     }
     &__choices{
         margin: 2rem 0 3rem;
@@ -80,7 +80,7 @@
         margin: 0 1rem;
     }
     &__sel{
-        @include color-choice(#fff,$tertiary);
+        @include color-choice(white,$tertiary);
         display: flex;
         align-items: center;
         justify-content: center;

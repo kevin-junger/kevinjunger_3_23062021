@@ -1,18 +1,18 @@
 .location{
-    @include color-choice(inherit,$grey-3);
+    @include bg-color($grey-3);
     padding: 1rem;
     text-align: center;
     box-shadow: inset 0px 5px 5px #dadada;
 }
 .about{
-    @include color-choice(inherit,$grey-1);
+    @include bg-color($grey-1);
     padding: 3rem 1.5rem;
     text-align: center;
     h2{
         @include font-choice($text,$bold,1.5rem);
     }
     p{
-        @include font-choice($text,$light);
+        @include f-weight($light);
         margin: 2rem 0;
     }
 }
@@ -22,7 +22,7 @@
         @include font-choice($text,$bold,1.5rem);
     }
     &__step{
-        @include color-choice(#fff,$primary);
+        @include color-choice(white,$primary);
         @include font-choice($text,$bold,.8rem);
         display: inline-block;
         height: 21px;
@@ -42,13 +42,13 @@
         border-radius: 25px;
         transition-duration: 0.5s;
         i{
-            @include color-choice($grey-4);
+            @include f-color($grey-4);
             transition-duration: 0.5s;
         }
         &:hover{
             @include color-choice(inherit,$primary-lighter,$grey-2);
             i{
-                @include color-choice($primary);
+                @include f-color($primary);
             }
         }
     }

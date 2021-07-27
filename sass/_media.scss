@@ -87,7 +87,7 @@
         border-radius: 30px;
     }
     .footer{
-        @include color-choice(inherit,$grey-5);
+        @include bg-color($grey-5);
         box-shadow: 0 -5px 10px $grey-2;
         max-width: 80vw;
         margin: 0 auto;

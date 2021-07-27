@@ -1,0 +1,21 @@
+{
+  "name": "kevinjunger_3_23062021",
+  "version": "1.0.0",
+  "description": "kevinjunger_3_23062021",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevin-junger/kevinjunger_3_23062021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevin-junger/kevinjunger_3_23062021/issues"
+  },
+  "homepage": "https://github.com/kevin-junger/kevinjunger_3_23062021#readme",
+  "browserslist": "last 4 versions"
+}
